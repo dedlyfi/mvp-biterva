@@ -1,0 +1,47 @@
+version: "3.7"
+
+services:
+  # --- 1. NUEVO SERVICIO: LND (Modo Neutrino) ---
+  lnd:
+    image: lightninglabs/lnd:v0.17.3-beta
+    container_name: lnbits-lnd
+    restart: always
+    environment:
+      - GODEBUG=netdns=go
+    volumes:
+      - ./lnd-data:/root/.lnd
+    ports:
+      - "8080:8080"
+      - "10009:10009"
+      - "9735:9735"
+    command: >
+      --bitcoin.active
+      --bitcoin.mainnet
+      --bitcoin.node=neutrino
+      --neutrino.connect=165.227.29.135
+      --neutrino.connect=52.50.244.44
+      --neutrino.connect=159.203.125.125
+      --neutrino.feeurl=https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json
+      --rpclisten=0.0.0.0:10009
+      --restlisten=0.0.0.0:8080
+      --listen=0.0.0.0:9735
+      --tlsextradomain=lnd
+      --tlsextradomain=lnbits-lnd
+
+  # --- 2. SERVICIO EXISTENTE: LNBITS (Modificado) ---
+  lnbits:
+    build: .
+    image: lnbits-custom:1.4.1
+    container_name: lnbits-main
+    restart: always
+    ports:
+      - "7777:5000"
+    env_file:
+      - .env
+    depends_on:
+      - lnd
+    volumes:
+      - ./data:/app/data
+      # ¡IMPORTANTE!: Montamos la carpeta de data de LND dentro de LNBits
+      # Esto permite que LNBits lea el archivo 'admin.macaroon' y 'tls.cert'
+      - ./lnd-data:/lnd-data-ro:ro

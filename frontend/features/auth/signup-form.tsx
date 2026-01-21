@@ -1,0 +1,125 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useWalletStore } from "@/lib/store";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { UserPlus, Eye, EyeOff, Lock } from "lucide-react";
+import Link from 'next/link';
+
+export function SignupForm() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    
+    const signup = useWalletStore((state) => state.signup);
+    const isLoading = useWalletStore((state) => state.isLoading);
+    const router = useRouter();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email || !name || !password || !confirmPassword) return;
+
+        if (password !== confirmPassword) {
+            alert("Las contraseñas no coinciden"); // TODO: Use better UI feedback
+            return;
+        }
+
+        try {
+            await signup(email, name, password);
+            router.push("/dashboard");
+        } catch (error) {
+            console.error("Signup failed", error);
+        }
+    };
+
+    return (
+        <Card className="w-full max-w-sm border border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
+            <CardHeader className="text-center space-y-2">
+                <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 ring-1 ring-primary/50">
+                    <UserPlus className="h-7 w-7 text-primary" />
+                </div>
+                <CardTitle className="text-2xl font-bold tracking-tight">Crear Cuenta</CardTitle>
+                <CardDescription className="text-muted-foreground">
+                    Únete a la revolución Bitcoin
+                </CardDescription>
+            </CardHeader>
+            <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="space-y-3">
+                         <Input
+                            type="text"
+                            placeholder="Nombre Completo"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                            className="h-12 bg-background/50 border-input focus-visible:ring-primary"
+                        />
+                        <Input
+                            type="email"
+                            placeholder="nombre@ejemplo.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            className="h-12 bg-background/50 border-input focus-visible:ring-primary"
+                        />
+                        <div className="relative">
+                            <Input
+                                type={showPassword ? "text" : "password"}
+                                placeholder="Contraseña (6+ caracteres)"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                minLength={6}
+                                className="h-12 bg-background/50 border-input focus-visible:ring-primary pr-10"
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                            >
+                                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                        </div>
+                        <div className="relative">
+                            <Input
+                                type={showConfirmPassword ? "text" : "password"}
+                                placeholder="Confirmar Contraseña"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                required
+                                minLength={6}
+                                className="h-12 bg-background/50 border-input focus-visible:ring-primary pr-10"
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                            >
+                                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                        </div>
+                    </div>
+                    <Button 
+                        type="submit" 
+                        className="w-full h-12 text-lg font-medium shadow-lg shadow-primary/20 transition-all hover:scale-[1.02]" 
+                        disabled={isLoading}
+                    >
+                        {isLoading ? "Creando Cuenta..." : "Registrarme"}
+                    </Button>
+                    <div className="mt-4 text-center text-sm text-muted-foreground">
+                        ¿Ya tienes cuenta?{" "}
+                        <Link href="/login" className="text-primary hover:underline font-medium">
+                            Inicia sesión
+                        </Link>
+                    </div>
+                </form>
+            </CardContent>
+        </Card>
+    );
+}
