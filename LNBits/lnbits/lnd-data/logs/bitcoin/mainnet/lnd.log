@@ -2303,3 +2303,1508 @@
 2026-01-21 01:35:30.475 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
 2026-01-21 01:35:30.476 [INF] LTND: We're not running within systemd or the service type is not 'notify'
 2026-01-21 01:35:30.476 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 01:51:51.635 [INF] LTND: Received terminated
+2026-01-21 01:51:51.636 [INF] LTND: Shutting down...
+2026-01-21 01:51:51.636 [INF] LTND: Gracefully shutting down.
+2026-01-21 01:51:52.594 [INF] RPCS: Stopping RPC Server
+2026-01-21 01:51:52.594 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 01:51:52.595 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 01:51:52.595 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 01:51:52.596 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 01:51:52.596 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 01:51:52.596 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 01:51:52.597 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 01:51:52.598 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 01:51:52.598 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 01:51:52.598 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 01:51:52.599 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 01:51:52.599 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 01:51:52.599 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 01:51:52.651 [INF] BTCN: Block manager shutting down
+2026-01-21 01:51:52.652 [INF] BTCN: Address manager shutting down
+2026-01-21 01:52:04.827 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 01:52:04.827 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 01:52:04.828 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 01:52:04.828 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 01:52:04.832 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 01:52:04.833 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 01:52:04.833 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 01:52:04.834 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 01:52:04.835 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 01:52:04.835 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 01:52:04.835 [INF] LTND: Database(s) now open (time_to_open=1.573333ms)!
+2026-01-21 01:52:04.836 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 01:52:04.837 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 01:52:04.837 [INF] BTCN: Broadcaster now active
+2026-01-21 01:52:04.837 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 01:52:04.837 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 01:52:04.919 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 01:52:04.919 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 01:52:04.936 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 01:52:05.014 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 01:52:05.048 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoinstats.com: lookup x49.seed.bitcoinstats.com on 127.0.0.11:53: no such host
+2026-01-21 01:52:05.135 [INF] CMGR: 36 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 01:52:07.467 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 01:52:07.994 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 01:52:09.011 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 01:52:11.029 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 01:52:15.040 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 01:52:18.732 [INF] LNWL: Opened wallet
+2026-01-21 01:52:18.754 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 01:52:18.765 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 01:52:18.765 [INF] LNWL: Starting web API fee estimator
+2026-01-21 01:52:19.286 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 01:52:19.286 [INF] CHRE: LightningWallet opened
+2026-01-21 01:52:19.289 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 01:52:19.289 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 01:52:19.289 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 01:52:19.289 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 01:52:19.290 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 01:52:19.290 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 01:52:19.291 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 01:52:19.291 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 01:58:56.398 [ERR] RPCS: [/lnrpc.Lightning/ConnectPeer]: server is still in the process of starting
+2026-01-21 02:00:28.299 [INF] LTND: Received terminated
+2026-01-21 02:00:28.300 [INF] LTND: Shutting down...
+2026-01-21 02:00:28.300 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:00:28.556 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:00:28.556 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:00:28.556 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:00:28.557 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:00:28.557 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:00:28.557 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:00:28.557 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:00:28.558 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:00:28.558 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:00:28.558 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:00:28.558 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:00:28.558 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:00:28.559 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:00:28.559 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:00:28.614 [INF] BTCN: Block manager shutting down
+2026-01-21 02:00:28.615 [INF] BTCN: Address manager shutting down
+2026-01-21 02:00:28.619 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:00:31.914 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:00:31.914 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:00:31.914 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:00:31.915 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:00:31.921 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:00:31.921 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:00:31.922 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:00:31.924 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:00:31.925 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:00:31.925 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:00:31.925 [INF] LTND: Database(s) now open (time_to_open=2.702541ms)!
+2026-01-21 02:00:31.927 [INF] BTCN: Loaded 173 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:00:31.927 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:00:31.927 [INF] BTCN: Broadcaster now active
+2026-01-21 02:00:31.928 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:00:31.928 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:00:32.011 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:00:32.024 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:00:32.035 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:00:32.101 [INF] CMGR: 36 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:00:32.128 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:00:32.142 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:00:32.214 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:00:34.582 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:00:35.089 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:00:36.098 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:00:37.117 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:00:38.113 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:00:42.123 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:00:42.217 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:00:42.402 [INF] LNWL: Opened wallet
+2026-01-21 02:00:42.424 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:00:42.436 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:00:42.436 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:00:42.946 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:00:42.946 [INF] CHRE: LightningWallet opened
+2026-01-21 02:00:42.949 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:00:42.949 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:00:42.949 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:00:42.949 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:00:42.950 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:00:42.950 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:00:42.951 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:00:42.951 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:00:47.320 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:00:52.410 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:00:57.523 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:02.619 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:07.716 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:12.806 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:17.891 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:22.972 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:28.050 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:33.139 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:38.229 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:43.324 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:48.348 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:53.440 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:01:58.516 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:03.549 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:08.575 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:13.651 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:18.728 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:23.758 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:28.856 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:33.942 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:39.017 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:44.095 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:49.158 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:54.194 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:02:59.267 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:04.363 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:09.458 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:14.554 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:19.632 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:24.724 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:29.755 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:34.856 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:39.940 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:45.031 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:50.053 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:55.159 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:03:57.703 [INF] LTND: Received terminated
+2026-01-21 02:03:57.703 [INF] LTND: Shutting down...
+2026-01-21 02:03:57.703 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:03:58.425 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:03:58.425 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:03:58.426 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:03:58.427 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:03:58.428 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:03:58.429 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:03:58.429 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:03:58.430 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:03:58.430 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:03:58.431 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:03:58.431 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:03:58.432 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:03:58.433 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:03:58.434 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:03:58.488 [INF] BTCN: Block manager shutting down
+2026-01-21 02:03:58.489 [INF] BTCN: Address manager shutting down
+2026-01-21 02:03:58.496 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:03:58.498 [INF] LTND: Shutdown complete2026-01-21 02:04:03.583 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:04:03.584 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:04:03.584 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:04:03.585 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:04:03.588 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:04:03.588 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:04:03.588 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:04:03.589 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:04:03.591 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:04:03.591 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:04:03.591 [INF] LTND: Database(s) now open (time_to_open=3.084792ms)!
+2026-01-21 02:04:03.594 [INF] BTCN: Loaded 335 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:04:03.594 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:04:03.594 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:04:03.594 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:04:03.594 [INF] BTCN: Broadcaster now active
+2026-01-21 02:04:03.664 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:04:03.666 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:04:03.672 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoinstats.com: lookup x49.seed.bitcoinstats.com on 127.0.0.11:53: no such host
+2026-01-21 02:04:03.683 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:04:03.780 [INF] CMGR: 23 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:04:03.784 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:04:06.264 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:04:06.770 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:04:07.781 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:04:09.788 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:04:13.801 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:04:14.772 [INF] LNWL: Opened wallet
+2026-01-21 02:04:14.793 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:04:14.804 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:04:14.804 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:04:15.288 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:04:15.289 [INF] CHRE: LightningWallet opened
+2026-01-21 02:04:15.291 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:04:15.291 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:04:15.291 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:04:15.291 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:04:15.292 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:04:15.292 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:04:15.293 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:04:15.293 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:05:49.451 [INF] LTND: Received terminated
+2026-01-21 02:05:49.452 [INF] LTND: Shutting down...
+2026-01-21 02:05:49.452 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:05:49.537 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:05:49.538 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:05:49.538 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:05:49.538 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:05:49.538 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:05:49.590 [INF] BTCN: Block manager shutting down
+2026-01-21 02:05:49.590 [INF] BTCN: Address manager shutting down
+2026-01-21 02:05:49.593 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:05:49.595 [INF] LTND: Shutdown complete
+
+2026-01-21 02:06:11.476 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:06:11.476 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:06:11.476 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:06:11.477 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:06:11.480 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:06:11.481 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:06:11.481 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:06:11.482 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:06:11.483 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:06:11.483 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:06:11.483 [INF] LTND: Database(s) now open (time_to_open=1.870458ms)!
+2026-01-21 02:06:11.485 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:06:11.485 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:06:11.485 [INF] BTCN: Broadcaster now active
+2026-01-21 02:06:11.485 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:06:11.485 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:06:11.506 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:06:11.506 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:06:11.556 [INF] CMGR: 36 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:06:11.564 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:06:11.674 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:06:11.737 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:06:14.092 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:06:14.600 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:06:15.612 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:06:17.624 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:06:21.640 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:06:23.922 [INF] LNWL: Opened wallet
+2026-01-21 02:06:23.945 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:06:23.957 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:06:23.957 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:06:24.680 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:06:24.680 [INF] CHRE: LightningWallet opened
+2026-01-21 02:06:24.683 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:06:24.683 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:06:24.683 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:06:24.683 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:06:24.684 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:06:24.684 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:06:24.685 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:06:24.685 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:12:39.577 [ERR] LNWL: unable to query web api for fee response: Get "https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json": dial tcp: lookup nodes.lightning.computer: i/o timeout
+2026-01-21 02:23:41.353 [INF] LTND: Received terminated
+2026-01-21 02:23:41.353 [INF] LTND: Shutting down...
+2026-01-21 02:23:41.354 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:23:41.726 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:23:41.726 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:23:41.727 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:23:41.728 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:23:41.729 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:23:41.729 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:23:41.730 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:23:41.731 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:23:41.731 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:23:41.732 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:23:41.732 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:23:41.732 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:23:41.733 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:23:41.735 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:23:41.786 [INF] BTCN: Block manager shutting down
+2026-01-21 02:23:41.787 [INF] BTCN: Address manager shutting down
+2026-01-21 02:23:41.794 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:23:41.814 [INF] LTND: Shutdown complete2026-01-21 02:23:47.678 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:23:47.678 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:23:47.678 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:23:47.679 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:23:47.683 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:23:47.684 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:23:47.684 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:23:47.686 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:23:47.688 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:23:47.688 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:23:47.688 [INF] LTND: Database(s) now open (time_to_open=4.039583ms)!
+2026-01-21 02:23:47.691 [INF] BTCN: Loaded 198 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:23:47.691 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:23:47.691 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:23:47.691 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:23:47.691 [INF] BTCN: Broadcaster now active
+2026-01-21 02:23:47.798 [INF] CMGR: 14 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:23:47.798 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:23:47.799 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:23:47.907 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:23:47.910 [INF] CMGR: 36 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:23:47.922 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoinstats.com: lookup x49.seed.bitcoinstats.com on 127.0.0.11:53: no such host
+2026-01-21 02:23:51.104 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:23:51.615 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:23:52.629 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:23:54.648 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:23:58.663 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:23:59.002 [INF] LNWL: Opened wallet
+2026-01-21 02:23:59.024 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:23:59.035 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:23:59.035 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:23:59.963 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:23:59.964 [INF] CHRE: LightningWallet opened
+2026-01-21 02:23:59.966 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:23:59.966 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:23:59.966 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:23:59.967 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:23:59.968 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:23:59.968 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:23:59.968 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:23:59.968 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:30:56.283 [INF] LTND: Received terminated
+2026-01-21 02:30:56.283 [INF] LTND: Shutting down...
+2026-01-21 02:30:56.283 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:30:57.101 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:30:57.101 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:30:57.102 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:30:57.103 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:30:57.103 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:30:57.104 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:30:57.104 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:30:57.104 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:30:57.105 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:30:57.105 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:30:57.106 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:30:57.106 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:30:57.107 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:30:57.108 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:30:57.158 [INF] BTCN: Block manager shutting down
+2026-01-21 02:30:57.159 [INF] BTCN: Address manager shutting down
+2026-01-21 02:30:57.166 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:30:57.169 [INF] LTND: Shutdown complete2026-01-21 02:31:20.422 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:31:20.422 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:31:20.422 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:31:20.423 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:31:20.427 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:31:20.428 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:31:20.428 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:31:20.429 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:31:20.432 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:31:20.432 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:31:20.432 [INF] LTND: Database(s) now open (time_to_open=3.667209ms)!
+2026-01-21 02:31:20.434 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:31:20.434 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:31:20.434 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:31:20.434 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:31:20.435 [INF] BTCN: Broadcaster now active
+2026-01-21 02:31:20.546 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:31:20.547 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:31:20.557 [INF] CMGR: 25 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:31:20.648 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:31:20.653 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:31:20.743 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoin.jonasschnelli.ch: lookup x49.seed.bitcoin.jonasschnelli.ch on 127.0.0.11:53: no such host
+2026-01-21 02:31:24.230 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:31:24.739 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:31:25.749 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:31:27.763 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:31:30.163 [INF] LNWL: Opened wallet
+2026-01-21 02:31:30.184 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:31:30.195 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:31:30.195 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:31:31.091 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:31:31.092 [INF] CHRE: LightningWallet opened
+2026-01-21 02:31:31.094 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:31:31.094 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:31:31.094 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:31:31.094 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:31:31.096 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:31:31.096 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:31:31.096 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:31:31.096 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:31:31.989 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 02:33:57.382 [ERR] RPCS: [/lnrpc.Lightning/ConnectPeer]: server is still in the process of starting
+2026-01-21 02:36:22.694 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 02:36:22.958 [INF] LTND: Received terminated
+2026-01-21 02:36:22.958 [INF] LTND: Shutting down...
+2026-01-21 02:36:22.959 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:36:23.893 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:36:23.893 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:36:23.894 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:36:23.895 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:36:23.895 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:36:23.895 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:36:23.895 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:36:23.895 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:36:23.896 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:36:23.896 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:36:23.896 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:36:23.896 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:36:23.896 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:36:23.897 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:36:23.948 [INF] BTCN: Block manager shutting down
+2026-01-21 02:36:23.948 [INF] BTCN: Address manager shutting down
+2026-01-21 02:36:23.953 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:36:23.954 [INF] LTND: Shutdown complete2026-01-21 02:36:32.324 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:36:32.324 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:36:32.324 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:36:32.325 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:36:32.328 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:36:32.329 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:36:32.329 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:36:32.331 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:36:32.333 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:36:32.333 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:36:32.333 [INF] LTND: Database(s) now open (time_to_open=4.693834ms)!
+2026-01-21 02:36:32.336 [INF] BTCN: Loaded 153 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:36:32.336 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:36:32.336 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:36:32.336 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:36:32.336 [INF] BTCN: Broadcaster now active
+2026-01-21 02:36:32.441 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:36:32.442 [INF] CMGR: 36 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:36:32.447 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:36:32.531 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoin.sipa.be: lookup x49.seed.bitcoin.sipa.be on 127.0.0.11:53: no such host
+2026-01-21 02:36:32.538 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:36:32.543 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:36:32.543 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:36:35.872 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:36:36.378 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:36:37.387 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:36:37.566 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:36:38.139 [INF] LNWL: Opened wallet
+2026-01-21 02:36:38.162 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:36:38.172 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:36:38.172 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:36:39.128 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:36:39.128 [INF] CHRE: LightningWallet opened
+2026-01-21 02:36:39.131 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:36:39.131 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:36:39.131 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:36:39.131 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:36:39.132 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:36:39.132 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:36:39.132 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:36:39.132 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:36:39.592 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 02:36:42.685 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:36:47.803 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:36:52.926 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:36:58.042 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:03.152 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:08.273 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:13.392 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:18.502 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:23.732 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:28.879 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:33.999 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:39.142 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:44.252 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:49.364 [WRN] BTCN: unable to lookup IP for btcd-mainnet.lightning.engineering: lookup btcd-mainnet.lightning.engineering on 127.0.0.11:53: no such host
+2026-01-21 02:37:52.085 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 02:37:52.325 [INF] LTND: Received terminated
+2026-01-21 02:37:52.325 [INF] LTND: Shutting down...
+2026-01-21 02:37:52.326 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:37:53.312 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:37:53.312 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:37:53.313 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:37:53.314 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:37:53.314 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:37:53.315 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:37:53.315 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:37:53.316 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:37:53.316 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:37:53.316 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:37:53.317 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:37:53.317 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:37:53.317 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:37:53.318 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:38:06.502 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:38:06.502 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:38:06.502 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:38:06.503 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:38:06.507 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:38:06.508 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:38:06.508 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:38:06.509 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:38:06.511 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:38:06.511 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:38:06.511 [INF] LTND: Database(s) now open (time_to_open=2.519958ms)!
+2026-01-21 02:38:06.512 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:38:06.512 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:38:06.513 [INF] BTCN: Broadcaster now active
+2026-01-21 02:38:06.513 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:38:06.513 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:38:06.619 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoin.jonasschnelli.ch: lookup x49.seed.bitcoin.jonasschnelli.ch on 127.0.0.11:53: no such host
+2026-01-21 02:38:06.619 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:38:06.619 [INF] CMGR: 14 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:38:06.620 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:38:06.641 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:38:06.723 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:38:10.084 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:38:10.590 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:38:11.597 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:38:11.847 [INF] LNWL: Opened wallet
+2026-01-21 02:38:11.869 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:38:11.881 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:38:11.881 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:38:12.972 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:38:12.973 [INF] CHRE: LightningWallet opened
+2026-01-21 02:38:12.975 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:38:12.975 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:38:12.975 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:38:12.976 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:38:12.976 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:38:12.976 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:38:12.977 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:38:12.977 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:38:13.810 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 02:38:33.379 [ERR] RPCS: [/lnrpc.Lightning/ConnectPeer]: server is still in the process of starting
+2026-01-21 02:40:04.127 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 02:40:04.387 [INF] LTND: Received terminated
+2026-01-21 02:40:04.387 [INF] LTND: Shutting down...
+2026-01-21 02:40:04.387 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:40:05.266 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:40:05.267 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:40:05.267 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:40:05.268 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:40:05.268 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:40:05.268 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:40:05.269 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:40:05.269 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:40:05.269 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:40:05.269 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:40:05.270 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:40:05.270 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:40:05.271 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:40:05.271 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:40:05.322 [INF] BTCN: Block manager shutting down
+2026-01-21 02:40:05.322 [INF] BTCN: Address manager shutting down
+2026-01-21 02:40:05.329 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:40:05.332 [INF] LTND: Shutdown complete2026-01-21 02:40:12.907 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:40:12.907 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:40:12.908 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:40:12.909 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:40:12.911 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:40:12.912 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:40:12.912 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:40:12.913 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:40:12.915 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:40:12.915 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:40:12.915 [INF] LTND: Database(s) now open (time_to_open=2.933667ms)!
+2026-01-21 02:40:12.916 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:40:12.916 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:40:12.916 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:40:12.916 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:40:12.916 [INF] BTCN: Broadcaster now active
+2026-01-21 02:40:13.022 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoinstats.com: lookup x49.seed.bitcoinstats.com on 127.0.0.11:53: no such host
+2026-01-21 02:40:13.024 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:40:13.024 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:40:13.024 [INF] CMGR: 36 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:40:13.024 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:40:13.128 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:40:16.438 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:40:16.949 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:40:17.472 [INF] LNWL: Opened wallet
+2026-01-21 02:40:17.495 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:40:17.505 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:40:17.505 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:40:17.968 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: the RPC server is in the process of starting up, but not yet ready to accept calls
+2026-01-21 02:40:18.319 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:40:18.319 [INF] CHRE: LightningWallet opened
+2026-01-21 02:40:18.322 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:40:18.322 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:40:18.322 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:40:18.322 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:40:18.323 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:40:18.323 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:40:18.323 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:40:18.323 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:40:20.186 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 02:45:32.099 [ERR] RPCS: [/lnrpc.Lightning/ConnectPeer]: server is still in the process of starting
+2026-01-21 02:46:50.984 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 02:46:51.224 [INF] LTND: Received terminated
+2026-01-21 02:46:51.224 [INF] LTND: Shutting down...
+2026-01-21 02:46:51.224 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:46:51.546 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:46:51.546 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:46:51.547 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:46:51.548 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:46:51.548 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:46:51.549 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:46:51.549 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:46:51.550 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:46:51.550 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:46:51.551 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:46:51.551 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:46:51.552 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:46:51.553 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:46:51.553 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:46:51.605 [INF] BTCN: Block manager shutting down
+2026-01-21 02:46:51.605 [INF] BTCN: Address manager shutting down
+2026-01-21 02:46:51.611 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:46:51.614 [INF] LTND: Shutdown complete2026-01-21 02:47:02.954 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:47:02.954 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:47:02.954 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:47:02.956 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:47:02.957 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:47:02.957 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:47:02.957 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:47:02.960 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:47:02.962 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:47:02.962 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:47:02.962 [INF] LTND: Database(s) now open (time_to_open=4.257125ms)!
+2026-01-21 02:47:02.964 [INF] BTCN: Loaded 174 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:47:02.964 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:47:02.964 [INF] BTCN: Broadcaster now active
+2026-01-21 02:47:02.964 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:47:02.964 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:47:03.069 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:47:03.070 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:47:03.079 [INF] CMGR: 14 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:47:03.169 [INF] CMGR: 36 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:47:03.174 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:47:03.193 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:47:06.506 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:47:07.014 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:47:08.019 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:47:08.058 [INF] LNWL: Opened wallet
+2026-01-21 02:47:08.081 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:47:08.092 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:47:08.092 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:47:09.007 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:47:09.007 [INF] CHRE: LightningWallet opened
+2026-01-21 02:47:09.010 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:47:09.010 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:47:09.010 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:47:09.010 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:47:09.011 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:47:09.011 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:47:09.011 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:47:09.011 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:47:10.230 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 02:49:06.431 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 02:49:06.682 [INF] LTND: Received terminated
+2026-01-21 02:49:06.683 [INF] LTND: Shutting down...
+2026-01-21 02:49:06.683 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:49:07.311 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:49:07.312 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:49:07.312 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:49:07.313 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:49:07.313 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:49:07.314 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:49:07.314 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:49:07.315 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:49:07.315 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:49:07.315 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:49:07.316 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:49:07.316 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:49:07.317 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:49:07.317 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:49:07.369 [INF] BTCN: Block manager shutting down
+2026-01-21 02:49:07.370 [INF] BTCN: Address manager shutting down
+2026-01-21 02:49:07.375 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:49:07.381 [INF] LTND: Shutdown complete2026-01-21 02:49:36.536 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:49:36.537 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:49:36.537 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:49:36.539 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:49:36.542 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:49:36.542 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:49:36.542 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:49:36.544 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:49:36.547 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:49:36.548 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:49:36.548 [INF] LTND: Database(s) now open (time_to_open=5.324417ms)!
+2026-01-21 02:49:36.550 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:49:36.551 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:49:36.551 [INF] BTCN: Broadcaster now active
+2026-01-21 02:49:36.551 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:49:36.551 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:49:36.659 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:49:36.660 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:49:36.660 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:49:36.764 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:49:36.781 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:49:36.854 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoin.jonasschnelli.ch: lookup x49.seed.bitcoin.jonasschnelli.ch on 127.0.0.11:53: no such host
+2026-01-21 02:49:40.142 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:49:40.646 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:49:40.850 [INF] LNWL: Opened wallet
+2026-01-21 02:49:40.872 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:49:40.882 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:49:40.882 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:49:41.652 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: the RPC server is in the process of starting up, but not yet ready to accept calls
+2026-01-21 02:49:41.694 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:49:41.695 [INF] CHRE: LightningWallet opened
+2026-01-21 02:49:41.697 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:49:41.697 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:49:41.697 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:49:41.697 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:49:41.698 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:49:41.698 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:49:41.699 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:49:41.699 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:49:43.861 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 02:50:27.896 [ERR] RPCS: [/lnrpc.Lightning/ConnectPeer]: server is still in the process of starting
+2026-01-21 02:50:51.448 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 02:50:51.683 [INF] LTND: Received terminated
+2026-01-21 02:50:51.683 [INF] LTND: Shutting down...
+2026-01-21 02:50:51.683 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:50:51.876 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:50:51.876 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:50:51.876 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:50:51.876 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:50:51.876 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:50:51.876 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:50:51.876 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:50:51.877 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:50:51.877 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:50:51.878 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:50:51.878 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:50:51.878 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:50:51.879 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:50:51.881 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:50:51.932 [INF] BTCN: Block manager shutting down
+2026-01-21 02:50:51.932 [INF] BTCN: Address manager shutting down
+2026-01-21 02:50:51.936 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:51:01.271 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:51:01.271 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:51:01.271 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:51:01.272 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:51:01.275 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:51:01.276 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:51:01.276 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:51:01.277 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:51:01.279 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:51:01.279 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:51:01.279 [INF] LTND: Database(s) now open (time_to_open=2.963833ms)!
+2026-01-21 02:51:01.280 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:51:01.280 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:51:01.280 [INF] BTCN: Broadcaster now active
+2026-01-21 02:51:01.281 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:51:01.281 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:51:01.391 [INF] CMGR: 13 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:51:01.391 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:51:01.391 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:51:01.490 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:51:01.492 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:51:01.492 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:51:04.810 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:51:05.313 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:51:05.595 [ERR] RPCS: [/lnrpc.WalletUnlocker/UnlockWallet]: invalid passphrase for master public key
+2026-01-21 02:51:06.321 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:51:08.331 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:51:12.346 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:51:18.118 [INF] LNWL: Opened wallet
+2026-01-21 02:51:18.144 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:51:18.155 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:51:18.155 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:51:19.111 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:51:19.111 [INF] CHRE: LightningWallet opened
+2026-01-21 02:51:19.114 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:51:19.114 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:51:19.114 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:51:19.115 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:51:19.116 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:51:19.116 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:51:19.117 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:51:19.117 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:53:08.314 [INF] LTND: Received terminated
+2026-01-21 02:53:08.315 [INF] LTND: Shutting down...
+2026-01-21 02:53:08.315 [INF] LTND: Gracefully shutting down.
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 02:53:08.350 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 02:53:08.351 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 02:53:08.351 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 02:53:08.405 [INF] BTCN: Block manager shutting down
+2026-01-21 02:53:08.405 [INF] BTCN: Address manager shutting down
+2026-01-21 02:53:08.407 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 02:53:08.408 [INF] LTND: Shutdown complete
+2026-01-21 02:53:23.028 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 02:53:23.028 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 02:53:23.028 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 02:53:23.029 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 02:53:23.033 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 02:53:23.034 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 02:53:23.034 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 02:53:23.037 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 02:53:23.039 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 02:53:23.039 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 02:53:23.039 [INF] LTND: Database(s) now open (time_to_open=5.135916ms)!
+2026-01-21 02:53:23.041 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 02:53:23.041 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 02:53:23.041 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:53:23.041 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 02:53:23.041 [INF] BTCN: Broadcaster now active
+2026-01-21 02:53:23.152 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 02:53:23.152 [INF] CMGR: 23 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 02:53:23.152 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 02:53:23.152 [INF] CMGR: 25 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 02:53:23.152 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 02:53:23.250 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 02:53:26.478 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:53:26.990 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 02:53:27.870 [INF] LNWL: Opened wallet
+2026-01-21 02:53:27.892 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 02:53:27.902 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 02:53:27.902 [INF] LNWL: Starting web API fee estimator
+2026-01-21 02:53:28.002 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: the RPC server is in the process of starting up, but not yet ready to accept calls
+2026-01-21 02:53:28.817 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 02:53:28.818 [INF] CHRE: LightningWallet opened
+2026-01-21 02:53:28.820 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 02:53:28.820 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 02:53:28.820 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 02:53:28.820 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 02:53:28.821 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 02:53:28.821 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 02:53:28.822 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 02:53:28.822 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 02:53:30.211 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 03:00:52.222 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 03:00:52.447 [INF] LTND: Received terminated
+2026-01-21 03:00:52.447 [INF] LTND: Shutting down...
+2026-01-21 03:00:52.448 [INF] LTND: Gracefully shutting down.
+2026-01-21 03:00:52.952 [INF] RPCS: Stopping RPC Server
+2026-01-21 03:00:52.952 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 03:00:52.953 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 03:00:52.954 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 03:00:52.955 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 03:00:52.955 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 03:00:52.956 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 03:00:52.956 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 03:00:52.957 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 03:00:52.957 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 03:00:52.958 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 03:00:52.958 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 03:00:52.959 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 03:00:52.960 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 03:00:53.011 [INF] BTCN: Block manager shutting down
+2026-01-21 03:00:53.011 [INF] BTCN: Address manager shutting down
+2026-01-21 03:00:53.015 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 03:00:53.017 [INF] LTND: Shutdown complete2026-01-21 03:01:23.911 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 03:01:23.911 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 03:01:23.912 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 03:01:23.913 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 03:01:23.917 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 03:01:23.917 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 03:01:23.917 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 03:01:23.919 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 03:01:23.921 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 03:01:23.921 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 03:01:23.921 [INF] LTND: Database(s) now open (time_to_open=3.882291ms)!
+2026-01-21 03:01:23.924 [INF] BTCN: Loaded 176 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 03:01:23.924 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 03:01:23.924 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:01:23.924 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 03:01:23.925 [INF] BTCN: Broadcaster now active
+2026-01-21 03:01:24.030 [INF] CMGR: 14 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 03:01:24.030 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 03:01:24.031 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 03:01:24.132 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 03:01:24.132 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 03:01:24.229 [INF] CMGR: 13 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 03:01:27.501 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:01:28.012 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:01:29.023 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:01:31.036 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:01:32.885 [INF] LNWL: Opened wallet
+2026-01-21 03:01:32.911 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 03:01:32.922 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 03:01:32.922 [INF] LNWL: Starting web API fee estimator
+2026-01-21 03:01:33.843 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 03:01:33.844 [INF] CHRE: LightningWallet opened
+2026-01-21 03:01:33.846 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 03:01:33.846 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 03:01:33.846 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 03:01:33.847 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 03:01:33.847 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 03:01:33.847 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 03:01:33.848 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:01:33.848 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 03:01:35.283 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 03:04:26.098 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 03:04:26.334 [INF] LTND: Received terminated
+2026-01-21 03:04:26.335 [INF] LTND: Shutting down...
+2026-01-21 03:04:26.335 [INF] LTND: Gracefully shutting down.
+2026-01-21 03:04:27.257 [INF] RPCS: Stopping RPC Server
+2026-01-21 03:04:27.257 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 03:04:27.258 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 03:04:27.258 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 03:04:27.258 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 03:04:27.258 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 03:04:27.259 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 03:04:27.259 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 03:04:27.259 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 03:04:27.259 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 03:04:27.259 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 03:04:27.259 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 03:04:27.260 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 03:04:27.260 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 03:04:27.312 [INF] BTCN: Block manager shutting down
+2026-01-21 03:04:27.312 [INF] BTCN: Address manager shutting down
+2026-01-21 03:04:27.316 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 03:04:42.636 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 03:04:42.636 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 03:04:42.636 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 03:04:42.637 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 03:04:42.641 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 03:04:42.641 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 03:04:42.642 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 03:04:42.643 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 03:04:42.646 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 03:04:42.646 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 03:04:42.646 [INF] LTND: Database(s) now open (time_to_open=4.426084ms)!
+2026-01-21 03:04:42.647 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 03:04:42.647 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 03:04:42.648 [INF] BTCN: Broadcaster now active
+2026-01-21 03:04:42.648 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:04:42.648 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 03:04:42.753 [INF] CMGR: 23 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 03:04:42.754 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 03:04:42.754 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 03:04:42.853 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoinstats.com: lookup x49.seed.bitcoinstats.com on 127.0.0.11:53: no such host
+2026-01-21 03:04:42.853 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 03:04:42.857 [INF] CMGR: 25 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 03:04:46.003 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:04:46.515 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:04:47.528 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:04:49.310 [INF] LNWL: Opened wallet
+2026-01-21 03:04:49.333 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 03:04:49.343 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 03:04:49.343 [INF] LNWL: Starting web API fee estimator
+2026-01-21 03:04:49.542 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: the RPC server is in the process of starting up, but not yet ready to accept calls
+2026-01-21 03:04:50.151 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 03:04:50.152 [INF] CHRE: LightningWallet opened
+2026-01-21 03:04:50.154 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 03:04:50.154 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 03:04:50.154 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 03:04:50.154 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 03:04:50.155 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 03:04:50.155 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 03:04:50.155 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:04:50.155 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 03:04:53.758 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 03:08:25.934 [ERR] RPCS: [/lnrpc.Lightning/ConnectPeer]: server is still in the process of starting
+2026-01-21 03:10:19.200 [INF] LTND: Received terminated
+2026-01-21 03:10:19.200 [INF] LTND: Shutting down...
+2026-01-21 03:10:19.201 [INF] LTND: Gracefully shutting down.
+2026-01-21 03:10:20.083 [INF] RPCS: Stopping RPC Server
+2026-01-21 03:10:20.083 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 03:10:20.084 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 03:10:20.086 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 03:10:20.084 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 03:10:20.087 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 03:10:20.089 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 03:10:20.090 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 03:10:20.092 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 03:10:20.093 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 03:10:20.093 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 03:10:20.094 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 03:10:20.095 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 03:10:20.096 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 03:10:20.097 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 03:10:20.099 [INF] INVC: New invoice subscription client: id=2
+2026-01-21 03:10:20.099 [INF] INVC: Cancelling invoice subscription for client=2
+2026-01-21 03:10:20.102 [INF] INVC: New invoice subscription client: id=3
+2026-01-21 03:10:20.102 [INF] INVC: Cancelling invoice subscription for client=3
+2026-01-21 03:10:20.104 [INF] INVC: New invoice subscription client: id=4
+2026-01-21 03:10:20.104 [INF] INVC: Cancelling invoice subscription for client=4
+2026-01-21 03:10:20.105 [INF] INVC: New invoice subscription client: id=5
+2026-01-21 03:10:20.105 [INF] INVC: Cancelling invoice subscription for client=5
+2026-01-21 03:10:20.107 [INF] INVC: New invoice subscription client: id=6
+2026-01-21 03:10:20.107 [INF] INVC: Cancelling invoice subscription for client=6
+2026-01-21 03:10:20.108 [INF] INVC: New invoice subscription client: id=7
+2026-01-21 03:10:20.108 [INF] INVC: Cancelling invoice subscription for client=7
+2026-01-21 03:10:20.110 [INF] INVC: New invoice subscription client: id=8
+2026-01-21 03:10:20.110 [INF] INVC: Cancelling invoice subscription for client=8
+2026-01-21 03:10:20.111 [INF] INVC: New invoice subscription client: id=9
+2026-01-21 03:10:20.111 [INF] INVC: Cancelling invoice subscription for client=9
+2026-01-21 03:10:20.112 [INF] INVC: New invoice subscription client: id=10
+2026-01-21 03:10:20.112 [INF] INVC: Cancelling invoice subscription for client=10
+2026-01-21 03:10:20.113 [INF] INVC: New invoice subscription client: id=11
+2026-01-21 03:10:20.113 [INF] INVC: Cancelling invoice subscription for client=11
+2026-01-21 03:10:20.114 [INF] INVC: New invoice subscription client: id=12
+2026-01-21 03:10:20.114 [INF] INVC: Cancelling invoice subscription for client=12
+2026-01-21 03:10:20.115 [INF] INVC: New invoice subscription client: id=13
+2026-01-21 03:10:20.115 [INF] INVC: Cancelling invoice subscription for client=13
+2026-01-21 03:10:20.116 [INF] INVC: New invoice subscription client: id=14
+2026-01-21 03:10:20.116 [INF] INVC: Cancelling invoice subscription for client=14
+2026-01-21 03:10:20.117 [INF] INVC: New invoice subscription client: id=15
+2026-01-21 03:10:20.117 [INF] INVC: Cancelling invoice subscription for client=15
+2026-01-21 03:10:20.118 [INF] INVC: New invoice subscription client: id=16
+2026-01-21 03:10:20.118 [INF] INVC: Cancelling invoice subscription for client=16
+2026-01-21 03:10:20.119 [INF] INVC: New invoice subscription client: id=17
+2026-01-21 03:10:20.119 [INF] INVC: Cancelling invoice subscription for client=17
+2026-01-21 03:10:20.120 [INF] INVC: New invoice subscription client: id=18
+2026-01-21 03:10:20.120 [INF] INVC: Cancelling invoice subscription for client=18
+2026-01-21 03:10:20.120 [INF] INVC: New invoice subscription client: id=19
+2026-01-21 03:10:20.120 [INF] INVC: Cancelling invoice subscription for client=19
+2026-01-21 03:10:20.121 [INF] INVC: New invoice subscription client: id=20
+2026-01-21 03:10:20.121 [INF] INVC: Cancelling invoice subscription for client=20
+2026-01-21 03:10:20.122 [INF] INVC: New invoice subscription client: id=21
+2026-01-21 03:10:20.122 [INF] INVC: Cancelling invoice subscription for client=21
+2026-01-21 03:10:20.123 [INF] INVC: New invoice subscription client: id=22
+2026-01-21 03:10:20.123 [INF] INVC: Cancelling invoice subscription for client=22
+2026-01-21 03:10:20.123 [INF] INVC: New invoice subscription client: id=23
+2026-01-21 03:10:20.123 [INF] INVC: Cancelling invoice subscription for client=23
+2026-01-21 03:10:20.124 [INF] INVC: New invoice subscription client: id=24
+2026-01-21 03:10:20.124 [INF] INVC: Cancelling invoice subscription for client=24
+2026-01-21 03:10:20.125 [INF] INVC: New invoice subscription client: id=25
+2026-01-21 03:10:20.125 [INF] INVC: Cancelling invoice subscription for client=25
+2026-01-21 03:10:20.126 [INF] INVC: New invoice subscription client: id=26
+2026-01-21 03:10:20.126 [INF] INVC: Cancelling invoice subscription for client=26
+2026-01-21 03:10:20.127 [INF] INVC: New invoice subscription client: id=27
+2026-01-21 03:10:20.127 [INF] INVC: Cancelling invoice subscription for client=27
+2026-01-21 03:10:20.127 [INF] INVC: New invoice subscription client: id=28
+2026-01-21 03:10:20.127 [INF] INVC: Cancelling invoice subscription for client=28
+2026-01-21 03:10:20.128 [INF] INVC: New invoice subscription client: id=29
+2026-01-21 03:10:20.128 [INF] INVC: Cancelling invoice subscription for client=29
+2026-01-21 03:10:20.129 [INF] INVC: New invoice subscription client: id=30
+2026-01-21 03:10:20.129 [INF] INVC: Cancelling invoice subscription for client=30
+2026-01-21 03:10:20.130 [INF] INVC: New invoice subscription client: id=31
+2026-01-21 03:10:20.130 [INF] INVC: Cancelling invoice subscription for client=31
+2026-01-21 03:10:20.130 [INF] INVC: New invoice subscription client: id=32
+2026-01-21 03:10:20.130 [INF] INVC: Cancelling invoice subscription for client=32
+2026-01-21 03:10:20.131 [INF] INVC: New invoice subscription client: id=33
+2026-01-21 03:10:20.131 [INF] INVC: Cancelling invoice subscription for client=33
+2026-01-21 03:10:20.132 [INF] INVC: New invoice subscription client: id=34
+2026-01-21 03:10:20.132 [INF] INVC: Cancelling invoice subscription for client=34
+2026-01-21 03:10:20.132 [INF] INVC: New invoice subscription client: id=35
+2026-01-21 03:10:20.133 [INF] INVC: Cancelling invoice subscription for client=35
+2026-01-21 03:10:20.133 [INF] INVC: New invoice subscription client: id=36
+2026-01-21 03:10:20.133 [INF] INVC: Cancelling invoice subscription for client=36
+2026-01-21 03:10:20.134 [INF] INVC: New invoice subscription client: id=37
+2026-01-21 03:10:20.134 [INF] INVC: Cancelling invoice subscription for client=37
+2026-01-21 03:10:20.135 [INF] INVC: New invoice subscription client: id=38
+2026-01-21 03:10:20.135 [INF] INVC: Cancelling invoice subscription for client=38
+2026-01-21 03:10:20.135 [INF] INVC: New invoice subscription client: id=39
+2026-01-21 03:10:20.135 [INF] INVC: Cancelling invoice subscription for client=39
+2026-01-21 03:10:20.136 [INF] INVC: New invoice subscription client: id=40
+2026-01-21 03:10:20.136 [INF] INVC: Cancelling invoice subscription for client=40
+2026-01-21 03:10:20.137 [INF] INVC: New invoice subscription client: id=41
+2026-01-21 03:10:20.137 [INF] INVC: Cancelling invoice subscription for client=41
+2026-01-21 03:10:20.137 [INF] INVC: New invoice subscription client: id=42
+2026-01-21 03:10:20.137 [INF] INVC: Cancelling invoice subscription for client=42
+2026-01-21 03:10:20.138 [INF] INVC: New invoice subscription client: id=43
+2026-01-21 03:10:20.138 [INF] INVC: Cancelling invoice subscription for client=43
+2026-01-21 03:10:20.138 [INF] INVC: New invoice subscription client: id=44
+2026-01-21 03:10:20.139 [INF] INVC: Cancelling invoice subscription for client=44
+2026-01-21 03:10:20.139 [INF] INVC: New invoice subscription client: id=45
+2026-01-21 03:10:20.139 [INF] INVC: Cancelling invoice subscription for client=45
+2026-01-21 03:10:20.140 [INF] INVC: New invoice subscription client: id=46
+2026-01-21 03:10:20.140 [INF] INVC: Cancelling invoice subscription for client=46
+2026-01-21 03:10:20.140 [INF] INVC: New invoice subscription client: id=47
+2026-01-21 03:10:20.140 [INF] INVC: Cancelling invoice subscription for client=47
+2026-01-21 03:10:20.141 [INF] INVC: New invoice subscription client: id=48
+2026-01-21 03:10:20.141 [INF] INVC: Cancelling invoice subscription for client=48
+2026-01-21 03:10:20.141 [INF] INVC: New invoice subscription client: id=49
+2026-01-21 03:10:20.141 [INF] INVC: Cancelling invoice subscription for client=49
+2026-01-21 03:10:20.142 [INF] INVC: New invoice subscription client: id=50
+2026-01-21 03:10:20.142 [INF] INVC: Cancelling invoice subscription for client=50
+2026-01-21 03:10:20.143 [INF] INVC: New invoice subscription client: id=51
+2026-01-21 03:10:20.143 [INF] INVC: Cancelling invoice subscription for client=51
+2026-01-21 03:10:20.143 [INF] INVC: New invoice subscription client: id=52
+2026-01-21 03:10:20.143 [INF] INVC: Cancelling invoice subscription for client=52
+2026-01-21 03:10:20.144 [INF] INVC: New invoice subscription client: id=53
+2026-01-21 03:10:20.144 [INF] INVC: Cancelling invoice subscription for client=53
+2026-01-21 03:10:20.144 [INF] INVC: New invoice subscription client: id=54
+2026-01-21 03:10:20.144 [INF] INVC: Cancelling invoice subscription for client=54
+2026-01-21 03:10:20.145 [INF] INVC: New invoice subscription client: id=55
+2026-01-21 03:10:20.145 [INF] INVC: Cancelling invoice subscription for client=55
+2026-01-21 03:10:20.145 [INF] INVC: New invoice subscription client: id=56
+2026-01-21 03:10:20.145 [INF] INVC: Cancelling invoice subscription for client=56
+2026-01-21 03:10:20.146 [INF] INVC: New invoice subscription client: id=57
+2026-01-21 03:10:20.146 [INF] INVC: Cancelling invoice subscription for client=57
+2026-01-21 03:10:20.146 [INF] INVC: New invoice subscription client: id=58
+2026-01-21 03:10:20.147 [INF] INVC: Cancelling invoice subscription for client=58
+2026-01-21 03:10:20.147 [INF] INVC: New invoice subscription client: id=59
+2026-01-21 03:10:20.147 [INF] INVC: Cancelling invoice subscription for client=59
+2026-01-21 03:10:20.148 [INF] INVC: New invoice subscription client: id=60
+2026-01-21 03:10:20.148 [INF] INVC: Cancelling invoice subscription for client=60
+2026-01-21 03:10:20.148 [INF] BTCN: Block manager shutting down
+2026-01-21 03:10:20.148 [INF] BTCN: Address manager shutting down
+2026-01-21 03:10:20.148 [INF] INVC: New invoice subscription client: id=61
+2026-01-21 03:10:20.148 [INF] INVC: Cancelling invoice subscription for client=61
+2026-01-21 03:10:20.149 [INF] INVC: New invoice subscription client: id=62
+2026-01-21 03:10:20.149 [INF] INVC: Cancelling invoice subscription for client=62
+2026-01-21 03:10:20.149 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 03:10:20.149 [ERR] RPCS: [/lnrpc.Lightning/SubscribeInvoices]: cannot retrieve macaroon: cannot get macaroon: macaroon store is locked
+2026-01-21 03:10:20.150 [INF] LTND: Shutdown complete
+
+2026-01-21 03:10:40.349 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 03:10:40.349 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 03:10:40.349 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 03:10:40.355 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 03:10:40.369 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 03:10:40.370 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 03:10:40.371 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 03:10:40.376 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 03:10:40.379 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 03:10:40.380 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 03:10:40.380 [INF] LTND: Database(s) now open (time_to_open=8.759584ms)!
+2026-01-21 03:10:40.386 [INF] BTCN: Loaded 150 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 03:10:40.386 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 03:10:40.387 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:10:40.387 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 03:10:40.387 [INF] BTCN: Broadcaster now active
+2026-01-21 03:10:40.497 [INF] CMGR: 23 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 03:10:40.497 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 03:10:40.498 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 03:10:40.498 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 03:10:40.498 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 03:10:40.602 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 03:10:41.552 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:10:42.059 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:10:43.071 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:10:45.080 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:10:49.096 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:11:07.375 [INF] LNWL: Opened wallet
+2026-01-21 03:11:07.397 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 03:11:07.408 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 03:11:07.408 [INF] LNWL: Starting web API fee estimator
+2026-01-21 03:11:08.325 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 03:11:08.325 [INF] CHRE: LightningWallet opened
+2026-01-21 03:11:08.328 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 03:11:08.328 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 03:11:08.328 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 03:11:08.328 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 03:11:08.330 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 03:11:08.330 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 03:11:08.330 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:11:08.330 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 03:21:36.827 [INF] LTND: Received terminated
+2026-01-21 03:21:36.827 [INF] LTND: Shutting down...
+2026-01-21 03:21:36.828 [INF] LTND: Gracefully shutting down.
+2026-01-21 03:21:36.953 [INF] RPCS: Stopping RPC Server
+2026-01-21 03:21:36.953 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 03:21:36.954 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 03:21:36.955 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 03:21:36.955 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 03:21:37.006 [INF] BTCN: Block manager shutting down
+2026-01-21 03:21:37.006 [INF] BTCN: Address manager shutting down
+2026-01-21 03:21:37.011 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 03:21:37.012 [INF] LTND: Shutdown complete
+2026-01-21 03:21:57.245 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 03:21:57.245 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 03:21:57.245 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 03:21:57.246 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 03:21:57.247 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 03:21:57.248 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 03:21:57.248 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 03:21:57.250 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 03:21:57.252 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 03:21:57.252 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 03:21:57.252 [INF] LTND: Database(s) now open (time_to_open=3.175167ms)!
+2026-01-21 03:21:57.253 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 03:21:57.253 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 03:21:57.253 [INF] BTCN: Broadcaster now active
+2026-01-21 03:21:57.254 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:21:57.254 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 03:21:57.362 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 03:21:57.363 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 03:21:57.363 [INF] CMGR: 25 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 03:21:57.452 [INF] CMGR: 13 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-21 03:21:57.466 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 03:21:57.481 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 03:22:00.808 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:22:01.319 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:22:02.329 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:22:03.085 [INF] LNWL: Opened wallet
+2026-01-21 03:22:03.107 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 03:22:03.118 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 03:22:03.118 [INF] LNWL: Starting web API fee estimator
+2026-01-21 03:22:03.926 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 03:22:03.927 [INF] CHRE: LightningWallet opened
+2026-01-21 03:22:03.929 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 03:22:03.929 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 03:22:03.930 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 03:22:03.930 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 03:22:03.930 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 03:22:03.930 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 03:22:03.931 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:22:03.931 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 03:22:04.539 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 03:22:50.854 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 03:22:51.058 [INF] LTND: Received terminated
+2026-01-21 03:22:51.058 [INF] LTND: Shutting down...
+2026-01-21 03:22:51.059 [INF] LTND: Gracefully shutting down.
+2026-01-21 03:22:52.025 [INF] RPCS: Stopping RPC Server
+2026-01-21 03:22:52.025 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 03:22:52.025 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 03:22:52.025 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 03:22:52.026 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 03:22:52.027 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 03:22:52.027 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 03:23:06.021 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-21 03:23:06.021 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-21 03:23:06.021 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-21 03:23:06.022 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-21 03:23:06.024 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-21 03:23:06.024 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-21 03:23:06.025 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-21 03:23:06.026 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-21 03:23:06.028 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-21 03:23:06.028 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-21 03:23:06.028 [INF] LTND: Database(s) now open (time_to_open=2.839584ms)!
+2026-01-21 03:23:06.029 [INF] BTCN: Loaded 0 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-21 03:23:06.029 [INF] BTCN: Registering block subscription: id=1
+2026-01-21 03:23:06.029 [INF] BTCN: Broadcaster now active
+2026-01-21 03:23:06.029 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:23:06.030 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-21 03:23:06.137 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoin.jonasschnelli.ch: lookup x49.seed.bitcoin.jonasschnelli.ch on 127.0.0.11:53: no such host
+2026-01-21 03:23:06.138 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-21 03:23:06.138 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-21 03:23:06.138 [INF] CMGR: 25 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-21 03:23:06.138 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-21 03:23:06.240 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-21 03:23:09.487 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:23:09.992 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:23:10.996 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-21 03:23:11.364 [INF] LNWL: Opened wallet
+2026-01-21 03:23:11.386 [INF] CHRE: Primary chain is set to: bitcoin
+2026-01-21 03:23:11.397 [INF] CHRE: Using external fee estimator https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json: cached=true
+2026-01-21 03:23:11.397 [INF] LNWL: Starting web API fee estimator
+2026-01-21 03:23:12.341 [INF] LNWL: The wallet has been unlocked without a time limit
+2026-01-21 03:23:12.341 [INF] CHRE: LightningWallet opened
+2026-01-21 03:23:12.344 [INF] HSWC: Cleaning circuits from disk for closed channels
+2026-01-21 03:23:12.344 [INF] HSWC: Finished cleaning: no closed channels found, no actions taken.
+2026-01-21 03:23:12.344 [INF] HSWC: Restoring in-memory circuit state from disk
+2026-01-21 03:23:12.344 [INF] HSWC: Payment circuits loaded: num_pending=0, num_open=0
+2026-01-21 03:23:12.345 [INF] LTND: Channel backup proxy channel notifier starting
+2026-01-21 03:23:12.345 [INF] ATPL: Instantiating autopilot with active=false, max_channels=5, allocation=0.600000, min_chan_size=20000, max_chan_size=16777215, private=false, min_confs=1, conf_target=3
+2026-01-21 03:23:12.345 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-21 03:23:12.346 [INF] LTND: Waiting for chain backend to finish sync, start_height=0
+2026-01-21 03:23:13.206 [INF] INVC: New invoice subscription client: id=1
+2026-01-21 03:23:16.890 [ERR] RPCS: [/lnrpc.Lightning/ConnectPeer]: server is still in the process of starting
+2026-01-21 14:34:23.773 [INF] LTND: Received terminated
+2026-01-21 14:34:23.773 [INF] LTND: Shutting down...
+2026-01-21 14:34:23.774 [INF] LTND: Gracefully shutting down.
+2026-01-21 14:34:24.487 [INF] RPCS: Stopping RPC Server
+2026-01-21 14:34:24.487 [INF] RPCS: Stopping RouterRPC Sub-RPC Server
+2026-01-21 14:34:24.489 [INF] RPCS: Stopping ChainRPC Sub-RPC Server
+2026-01-21 14:34:24.491 [INF] RPCS: Stopping NeutrinoKitRPC Sub-RPC Server
+2026-01-21 14:34:24.489 [INF] INVC: Cancelling invoice subscription for client=1
+2026-01-21 14:34:24.492 [INF] RPCS: Stopping WalletKitRPC Sub-RPC Server
+2026-01-21 14:34:24.494 [INF] RPCS: Stopping WatchtowerRPC Sub-RPC Server
+2026-01-21 14:34:24.494 [INF] RPCS: Stopping AutopilotRPC Sub-RPC Server
+2026-01-21 14:34:24.496 [INF] RPCS: Stopping SignRPC Sub-RPC Server
+2026-01-21 14:34:24.499 [INF] RPCS: Stopping VersionRPC Sub-RPC Server
+2026-01-21 14:34:24.502 [INF] RPCS: Stopping InvoicesRPC Sub-RPC Server
+2026-01-21 14:34:24.502 [INF] RPCS: Stopping PeersRPC Sub-RPC Server
+2026-01-21 14:34:24.503 [INF] RPCS: Stopping WatchtowerClientRPC Sub-RPC Server
+2026-01-21 14:34:24.509 [INF] LNWL: Stopped waiting for wallet sync due to error: wallet shutting down
+2026-01-21 14:34:24.510 [INF] INVC: New invoice subscription client: id=2
+2026-01-21 14:34:24.511 [INF] BTCN: Canceling block subscription: id=1
+2026-01-21 14:34:24.512 [INF] INVC: Cancelling invoice subscription for client=2
+2026-01-21 14:34:24.516 [INF] INVC: New invoice subscription client: id=3
+2026-01-21 14:34:24.516 [INF] INVC: Cancelling invoice subscription for client=3
+2026-01-21 14:34:24.521 [INF] INVC: New invoice subscription client: id=4
+2026-01-21 14:34:24.521 [INF] INVC: Cancelling invoice subscription for client=4
+2026-01-21 14:34:24.522 [INF] INVC: New invoice subscription client: id=5
+2026-01-21 14:34:24.523 [INF] INVC: Cancelling invoice subscription for client=5
+2026-01-21 14:34:24.524 [INF] INVC: New invoice subscription client: id=6
+2026-01-21 14:34:24.524 [INF] INVC: Cancelling invoice subscription for client=6
+2026-01-21 14:34:24.526 [INF] INVC: New invoice subscription client: id=7
+2026-01-21 14:34:24.526 [INF] INVC: Cancelling invoice subscription for client=7
+2026-01-21 14:34:24.526 [INF] INVC: New invoice subscription client: id=8
+2026-01-21 14:34:24.526 [INF] INVC: Cancelling invoice subscription for client=8
+2026-01-21 14:34:24.527 [INF] INVC: New invoice subscription client: id=9
+2026-01-21 14:34:24.527 [INF] INVC: Cancelling invoice subscription for client=9
+2026-01-21 14:34:24.527 [INF] INVC: New invoice subscription client: id=10
+2026-01-21 14:34:24.528 [INF] INVC: Cancelling invoice subscription for client=10
+2026-01-21 14:34:24.528 [INF] INVC: New invoice subscription client: id=11
+2026-01-21 14:34:24.528 [INF] INVC: Cancelling invoice subscription for client=11
+2026-01-21 14:34:24.529 [INF] INVC: New invoice subscription client: id=12
+2026-01-21 14:34:24.529 [INF] INVC: Cancelling invoice subscription for client=12
+2026-01-21 14:34:24.529 [INF] INVC: New invoice subscription client: id=13
+2026-01-21 14:34:24.529 [INF] INVC: Cancelling invoice subscription for client=13
+2026-01-21 14:34:24.530 [INF] INVC: New invoice subscription client: id=14
+2026-01-21 14:34:24.530 [INF] INVC: Cancelling invoice subscription for client=14
+2026-01-21 14:34:24.532 [INF] INVC: New invoice subscription client: id=15
+2026-01-21 14:34:24.532 [INF] INVC: Cancelling invoice subscription for client=15
+2026-01-21 14:34:24.532 [INF] INVC: New invoice subscription client: id=16
+2026-01-21 14:34:24.532 [INF] INVC: Cancelling invoice subscription for client=16
+2026-01-21 14:34:24.533 [INF] INVC: New invoice subscription client: id=17
+2026-01-21 14:34:24.533 [INF] INVC: Cancelling invoice subscription for client=17
+2026-01-21 14:34:24.533 [INF] INVC: New invoice subscription client: id=18
+2026-01-21 14:34:24.533 [INF] INVC: Cancelling invoice subscription for client=18
+2026-01-21 14:34:24.534 [INF] INVC: New invoice subscription client: id=19
+2026-01-21 14:34:24.534 [INF] INVC: Cancelling invoice subscription for client=19
+2026-01-21 14:34:24.534 [INF] INVC: New invoice subscription client: id=20
+2026-01-21 14:34:24.534 [INF] INVC: Cancelling invoice subscription for client=20
+2026-01-21 14:34:24.535 [INF] INVC: New invoice subscription client: id=21
+2026-01-21 14:34:24.535 [INF] INVC: Cancelling invoice subscription for client=21
+2026-01-21 14:34:24.535 [INF] INVC: New invoice subscription client: id=22
+2026-01-21 14:34:24.535 [INF] INVC: Cancelling invoice subscription for client=22
+2026-01-21 14:34:24.536 [INF] INVC: New invoice subscription client: id=23
+2026-01-21 14:34:24.536 [INF] INVC: Cancelling invoice subscription for client=23
+2026-01-21 14:34:24.537 [INF] INVC: New invoice subscription client: id=24
+2026-01-21 14:34:24.537 [INF] INVC: Cancelling invoice subscription for client=24
+2026-01-21 14:34:24.538 [INF] INVC: New invoice subscription client: id=25
+2026-01-21 14:34:24.538 [INF] INVC: Cancelling invoice subscription for client=25
+2026-01-21 14:34:24.538 [INF] INVC: New invoice subscription client: id=26
+2026-01-21 14:34:24.538 [INF] INVC: Cancelling invoice subscription for client=26
+2026-01-21 14:34:24.539 [INF] INVC: New invoice subscription client: id=27
+2026-01-21 14:34:24.540 [INF] INVC: Cancelling invoice subscription for client=27
+2026-01-21 14:34:24.540 [INF] INVC: New invoice subscription client: id=28
+2026-01-21 14:34:24.540 [INF] INVC: Cancelling invoice subscription for client=28
+2026-01-21 14:34:24.541 [INF] INVC: New invoice subscription client: id=29
+2026-01-21 14:34:24.541 [INF] INVC: Cancelling invoice subscription for client=29
+2026-01-21 14:34:24.541 [INF] INVC: New invoice subscription client: id=30
+2026-01-21 14:34:24.541 [INF] INVC: Cancelling invoice subscription for client=30
+2026-01-21 14:34:24.542 [INF] INVC: New invoice subscription client: id=31
+2026-01-21 14:34:24.542 [INF] INVC: Cancelling invoice subscription for client=31
+2026-01-21 14:34:24.542 [INF] INVC: New invoice subscription client: id=32
+2026-01-21 14:34:24.542 [INF] INVC: Cancelling invoice subscription for client=32
+2026-01-21 14:34:24.543 [INF] INVC: New invoice subscription client: id=33
+2026-01-21 14:34:24.543 [INF] INVC: Cancelling invoice subscription for client=33
+2026-01-21 14:34:24.543 [INF] INVC: New invoice subscription client: id=34
+2026-01-21 14:34:24.543 [INF] INVC: Cancelling invoice subscription for client=34
+2026-01-21 14:34:24.544 [INF] INVC: New invoice subscription client: id=35
+2026-01-21 14:34:24.544 [INF] INVC: Cancelling invoice subscription for client=35
+2026-01-21 14:34:24.544 [INF] INVC: New invoice subscription client: id=36
+2026-01-21 14:34:24.544 [INF] INVC: Cancelling invoice subscription for client=36
+2026-01-21 14:34:24.545 [INF] INVC: New invoice subscription client: id=37
+2026-01-21 14:34:24.545 [INF] INVC: Cancelling invoice subscription for client=37
+2026-01-21 14:34:24.545 [INF] INVC: New invoice subscription client: id=38
+2026-01-21 14:34:24.545 [INF] INVC: Cancelling invoice subscription for client=38
+2026-01-21 14:34:24.546 [INF] INVC: New invoice subscription client: id=39
+2026-01-21 14:34:24.546 [INF] INVC: Cancelling invoice subscription for client=39
+2026-01-21 14:34:24.546 [INF] INVC: New invoice subscription client: id=40
+2026-01-21 14:34:24.546 [INF] INVC: Cancelling invoice subscription for client=40
+2026-01-21 14:34:24.547 [INF] INVC: New invoice subscription client: id=41
+2026-01-21 14:34:24.547 [INF] INVC: Cancelling invoice subscription for client=41
+2026-01-21 14:34:24.547 [INF] INVC: New invoice subscription client: id=42
+2026-01-21 14:34:24.547 [INF] INVC: Cancelling invoice subscription for client=42
+2026-01-21 14:34:24.548 [INF] INVC: New invoice subscription client: id=43
+2026-01-21 14:34:24.548 [INF] INVC: Cancelling invoice subscription for client=43
+2026-01-21 14:34:24.548 [INF] INVC: New invoice subscription client: id=44
+2026-01-21 14:34:24.548 [INF] INVC: Cancelling invoice subscription for client=44
+2026-01-21 14:34:24.549 [INF] INVC: New invoice subscription client: id=45
+2026-01-21 14:34:24.549 [INF] INVC: Cancelling invoice subscription for client=45
+2026-01-21 14:34:24.549 [INF] INVC: New invoice subscription client: id=46
+2026-01-21 14:34:24.549 [INF] INVC: Cancelling invoice subscription for client=46
+2026-01-21 14:34:24.550 [INF] INVC: New invoice subscription client: id=47
+2026-01-21 14:34:24.550 [INF] INVC: Cancelling invoice subscription for client=47
+2026-01-21 14:34:24.550 [INF] INVC: New invoice subscription client: id=48
+2026-01-21 14:34:24.550 [INF] INVC: Cancelling invoice subscription for client=48
+2026-01-21 14:34:24.551 [INF] INVC: New invoice subscription client: id=49
+2026-01-21 14:34:24.551 [INF] INVC: Cancelling invoice subscription for client=49
+2026-01-21 14:34:24.551 [INF] INVC: New invoice subscription client: id=50
+2026-01-21 14:34:24.551 [INF] INVC: Cancelling invoice subscription for client=50
+2026-01-21 14:34:24.553 [INF] INVC: New invoice subscription client: id=51
+2026-01-21 14:34:24.553 [INF] INVC: Cancelling invoice subscription for client=51
+2026-01-21 14:34:24.553 [INF] INVC: New invoice subscription client: id=52
+2026-01-21 14:34:24.553 [INF] INVC: Cancelling invoice subscription for client=52
+2026-01-21 14:34:24.553 [INF] INVC: New invoice subscription client: id=53
+2026-01-21 14:34:24.553 [INF] INVC: Cancelling invoice subscription for client=53
+2026-01-21 14:34:24.554 [INF] INVC: New invoice subscription client: id=54
+2026-01-21 14:34:24.554 [INF] INVC: Cancelling invoice subscription for client=54
+2026-01-21 14:34:24.554 [INF] INVC: New invoice subscription client: id=55
+2026-01-21 14:34:24.554 [INF] INVC: Cancelling invoice subscription for client=55
+2026-01-21 14:34:24.555 [INF] INVC: New invoice subscription client: id=56
+2026-01-21 14:34:24.555 [INF] INVC: Cancelling invoice subscription for client=56
+2026-01-21 14:34:24.555 [INF] INVC: New invoice subscription client: id=57
+2026-01-21 14:34:24.555 [INF] INVC: Cancelling invoice subscription for client=57
+2026-01-21 14:34:24.556 [INF] INVC: New invoice subscription client: id=58
+2026-01-21 14:34:24.556 [INF] INVC: Cancelling invoice subscription for client=58
+2026-01-21 14:34:24.556 [INF] INVC: New invoice subscription client: id=59
+2026-01-21 14:34:24.556 [INF] INVC: Cancelling invoice subscription for client=59
+2026-01-21 14:34:24.557 [INF] INVC: New invoice subscription client: id=60
+2026-01-21 14:34:24.557 [INF] INVC: Cancelling invoice subscription for client=60
+2026-01-21 14:34:24.557 [INF] INVC: New invoice subscription client: id=61
+2026-01-21 14:34:24.557 [INF] INVC: Cancelling invoice subscription for client=61
+2026-01-21 14:34:24.558 [INF] INVC: New invoice subscription client: id=62
+2026-01-21 14:34:24.558 [INF] INVC: Cancelling invoice subscription for client=62
+2026-01-21 14:34:24.558 [INF] INVC: New invoice subscription client: id=63
+2026-01-21 14:34:24.558 [INF] INVC: Cancelling invoice subscription for client=63
+2026-01-21 14:34:24.559 [INF] INVC: New invoice subscription client: id=64
+2026-01-21 14:34:24.559 [INF] INVC: Cancelling invoice subscription for client=64
+2026-01-21 14:34:24.560 [INF] INVC: New invoice subscription client: id=65
+2026-01-21 14:34:24.560 [INF] INVC: Cancelling invoice subscription for client=65
+2026-01-21 14:34:24.560 [INF] INVC: New invoice subscription client: id=66
+2026-01-21 14:34:24.560 [INF] INVC: Cancelling invoice subscription for client=66
+2026-01-21 14:34:24.561 [INF] INVC: New invoice subscription client: id=67
+2026-01-21 14:34:24.561 [INF] INVC: Cancelling invoice subscription for client=67
+2026-01-21 14:34:24.561 [INF] INVC: New invoice subscription client: id=68
+2026-01-21 14:34:24.561 [INF] INVC: Cancelling invoice subscription for client=68
+2026-01-21 14:34:24.562 [INF] INVC: New invoice subscription client: id=69
+2026-01-21 14:34:24.562 [INF] INVC: Cancelling invoice subscription for client=69
+2026-01-21 14:34:24.562 [INF] INVC: New invoice subscription client: id=70
+2026-01-21 14:34:24.562 [INF] INVC: Cancelling invoice subscription for client=70
+2026-01-21 14:34:24.563 [INF] INVC: New invoice subscription client: id=71
+2026-01-21 14:34:24.563 [INF] INVC: Cancelling invoice subscription for client=71
+2026-01-21 14:34:24.563 [INF] INVC: New invoice subscription client: id=72
+2026-01-21 14:34:24.563 [INF] INVC: Cancelling invoice subscription for client=72
+2026-01-21 14:34:24.564 [INF] INVC: New invoice subscription client: id=73
+2026-01-21 14:34:24.564 [INF] INVC: Cancelling invoice subscription for client=73
+2026-01-21 14:34:24.564 [INF] INVC: New invoice subscription client: id=74
+2026-01-21 14:34:24.564 [INF] INVC: Cancelling invoice subscription for client=74
+2026-01-21 14:34:24.565 [INF] INVC: New invoice subscription client: id=75
+2026-01-21 14:34:24.565 [INF] INVC: Cancelling invoice subscription for client=75
+2026-01-21 14:34:24.565 [INF] BTCN: Block manager shutting down
+2026-01-21 14:34:24.565 [INF] INVC: New invoice subscription client: id=76
+2026-01-21 14:34:24.565 [INF] BTCN: Address manager shutting down
+2026-01-21 14:34:24.566 [INF] INVC: Cancelling invoice subscription for client=76
+2026-01-21 14:34:24.566 [INF] INVC: New invoice subscription client: id=77
+2026-01-21 14:34:24.566 [INF] INVC: Cancelling invoice subscription for client=77
+2026-01-21 14:34:24.567 [INF] INVC: New invoice subscription client: id=78
+2026-01-21 14:34:24.567 [INF] INVC: Cancelling invoice subscription for client=78
+2026-01-21 14:34:24.567 [INF] INVC: New invoice subscription client: id=79
+2026-01-21 14:34:24.568 [INF] INVC: Cancelling invoice subscription for client=79
+2026-01-21 14:34:24.569 [INF] INVC: New invoice subscription client: id=80
+2026-01-21 14:34:24.569 [INF] INVC: Cancelling invoice subscription for client=80
+2026-01-21 14:34:24.568 [INF] LNWL: Stopping web API fee estimator
+2026-01-21 14:34:24.571 [ERR] RPCS: [/lnrpc.Lightning/SubscribeInvoices]: cannot retrieve macaroon: cannot get macaroon: macaroon store is locked
+2026-01-23 19:38:35.544 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-23 19:38:35.546 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-23 19:38:35.548 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-23 19:38:35.598 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-23 19:38:35.664 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-23 19:38:35.664 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-23 19:38:36.168 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-23 19:38:36.181 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-23 19:38:36.245 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-23 19:38:36.245 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-23 19:38:36.246 [INF] LTND: Database(s) now open (time_to_open=73.913542ms)!
+2026-01-23 19:38:36.273 [INF] BTCN: Loaded 154 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-23 19:38:36.274 [INF] BTCN: Registering block subscription: id=1
+2026-01-23 19:38:36.275 [INF] BTCN: Broadcaster now active
+2026-01-23 19:38:36.280 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-23 19:38:36.285 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-23 19:38:36.516 [INF] CMGR: 25 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-23 19:38:36.516 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-23 19:38:36.537 [INF] CMGR: 13 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-23 19:38:36.537 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-23 19:38:36.537 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-23 19:38:36.549 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoinstats.com: lookup x49.seed.bitcoinstats.com on 127.0.0.11:53: no such host
+2026-01-23 19:38:39.098 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-23 19:38:39.603 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-23 19:38:40.605 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-23 19:38:42.612 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-23 19:38:46.637 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-23 19:42:20.496 [INF] LTND: Received terminated
+2026-01-23 19:42:20.496 [INF] LTND: Shutting down...
+2026-01-23 19:42:20.497 [INF] LTND: Gracefully shutting down.
+2026-01-23 19:42:20.498 [ERR] LTND: unable to set up wallet password listeners: shutting down
+2026-01-23 19:42:20.498 [INF] BTCN: Canceling block subscription: id=1
+2026-01-23 19:42:20.552 [INF] BTCN: Block manager shutting down
+2026-01-23 19:42:20.552 [INF] BTCN: Address manager shutting down
+2026-01-23 19:42:20.555 [ERR] LTND: Shutting down because error in main method: error creating wallet config: unable to set up wallet password listeners: shutting down
+2026-01-23 19:42:20.556 [INF] LTND: Shutdown complete
+

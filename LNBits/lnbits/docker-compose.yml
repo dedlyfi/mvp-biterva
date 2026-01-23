@@ -19,8 +19,11 @@ services:
       --bitcoin.mainnet
       --bitcoin.node=neutrino
       --neutrino.connect=165.227.29.135
+      --neutrino.connect=3.33.236.230
+      --neutrino.connect=50.112.125.89
       --neutrino.connect=52.50.244.44
       --neutrino.connect=159.203.125.125
+      --neutrino.connect=137.184.45.15
       --neutrino.feeurl=https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json
       --rpclisten=0.0.0.0:10009
       --restlisten=0.0.0.0:8080

@@ -126,3 +126,79 @@ docker exec -it lnbits-lnd lncli connect 03864ef025fde8fb587d989186ce6a4a186895e
 
 docker exec -it lnbits-lnd lncli unlock 
 docker logs -f lnbits-lnd
+
+## 🛠 Comandos Útiles para LNBits/LND
+
+### 🚀 Gestión del Ciclo de Vida
+- **Iniciar el nodo (segundo plano):**
+  ```bash
+  docker-compose up -d
+Ver los logs en tiempo real (Salida):
+
+Bash
+
+docker logs -f lnbits-lnd
+Reiniciar el nodo (aplica cambios de config):
+
+Bash
+
+docker-compose restart lnbits-lnd
+Detener y eliminar el contenedor:
+
+Bash
+
+docker-compose down
+
+
+⚡️ Gestión de Lightning (lncli)
+Estos comandos se ejecutan directo contra el contenedor:
+
+Desbloquear la Billetera:
+
+Bash
+
+docker exec -it lnbits-lnd lncli unlock
+Ver información del nodo (Estado, Bloques, Peers):
+
+Bash
+
+docker exec -it lnbits-lnd lncli getinfo
+Conectar manualmente a un nodo (Peer):
+
+Bash
+
+docker exec -it lnbits-lnd lncli connect <PUBKEY>@<HOST>:<PORT>
+Ver balance de la billetera:
+
+Bash
+
+docker exec -it lnbits-lnd lncli walletbalance
+Ver balance de canales:
+
+Bash
+
+docker exec -it lnbits-lnd lncli channelbalance
+🧹 Mantenimiento (Solo si hay problemas)
+Borrar caché de peers corrupta:
+
+Bash
+
+docker-compose down
+rm -f lnd-data/data/chain/bitcoin/mainnet/peers.json
+docker-compose up -d
+
+---
+
+### 🎨 ¿Cómo ponerle color a los logs de Docker?
+
+Por defecto, `docker logs` muestra el texto plano tal cual lo escupe la aplicación (LND). Para verlo con colores en tu Mac, la forma más rápida es usar una herramienta como `ccze`.
+
+**Opción Rápida (Manual):**
+1. Instala `ccze` (si tienes Homebrew):
+   ```bash
+   brew install ccze
+Ejecuta los logs pasándolos por la herramienta:
+
+Bash
+
+docker logs -f lnbits-lnd | ccze -A
