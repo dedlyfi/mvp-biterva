@@ -15,13 +15,13 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     await connectToDatabase();
 
     const body = JSON.parse(event.body || '{}');
-    const { email, password, name } = body;
+    const { identity, password, name } = body;
 
-    if (!email || !password || !name) {
+    if (!identity || !password || !name) {
       return {
         statusCode: 400,
         headers: { 'Access-Control-Allow-Origin': '*' },
-        body: JSON.stringify({ message: 'Email, name, and password are required' }),
+        body: JSON.stringify({ message: 'Identity, name, and password are required' }),
       };
     }
 
@@ -30,8 +30,9 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     const mongoId = new Types.ObjectId().toString();
 
     // 2. Create Wallet in LNBits
-    console.log('Creating wallet for:', email, 'MongoID:', mongoId);
-    const walletData = await lnBitsService.createWallet(mongoId, email);
+    console.log('Creating wallet for:', identity, 'MongoID:', mongoId);
+    // Use the full device name (Brand Model ID) for LNBits visibility
+    const walletData = await lnBitsService.createWallet(mongoId, name);
 
     // 3. Hash Password
     const passwordHash = await bcrypt.hash(password, 10);
@@ -39,7 +40,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     // 4. Create User Domain Entity
     const newUser = new User(
       mongoId,
-      email,
+      identity,
       name,
       passwordHash,
       1, // KYC
@@ -62,7 +63,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     await sqsProducer.sendMessage({
       type: 'UserCreatedEvent',
       userId: mongoId, // Pass the ID we just generated
-      email: newUser.email,
+      identity: newUser.identity,
       timestamp: new Date().toISOString(),
     });
     console.log('SQS Event sent.');
@@ -74,7 +75,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
         message: 'User created successfully',
         user: {
           id: newUser.id,
-          email: newUser.email,
+          identity: newUser.identity,
           name: newUser.name,
           walletId: newUser.wallet.lnbitsId,
           balance: newUser.balance,

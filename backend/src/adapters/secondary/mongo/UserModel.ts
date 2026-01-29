@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IUserDocument extends Document {
-  email: string;
+  identity: string; // Previously email
   name: string;
   passwordHash: string;
   kycLevel: number;
@@ -20,7 +20,7 @@ export interface IUserDocument extends Document {
 }
 
 const UserSchema: Schema = new Schema({
-  email: { type: String, required: true, unique: true },
+  identity: { type: String, required: true, unique: true },
   name: { type: String, required: true },
   passwordHash: { type: String, required: true },
   kycLevel: { type: Number, default: 0 },
@@ -38,6 +38,6 @@ const UserSchema: Schema = new Schema({
     },
   ],
   nequiNumber: { type: String },
-});
+}, { timestamps: true });
 
 export const UserModel = mongoose.model<IUserDocument>('User', UserSchema);

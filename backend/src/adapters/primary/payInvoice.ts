@@ -31,8 +31,8 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
     // 1. Get User
     let user = await userRepository.findById(userId);
-    if (!user && userId.includes('@')) {
-        user = await userRepository.findByEmail(userId);
+    if (!user && (userId.startsWith('btv_') || userId.includes('('))) {
+        user = await userRepository.findByIdentity(userId);
     }
     
     if (!user) {
@@ -44,7 +44,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     }
 
     // Check if user has wallet
-    console.log(`User found: ${user.email}, ID: ${user.id}`);
+    console.log(`User found: ${user.identity}, ID: ${user.id}`);
     console.log(`User Wallet keys:`, user.wallet);
     
     if (!user.wallet || !user.wallet.adminKey || !user.wallet.invoiceKey) {

@@ -1,5 +1,5 @@
 export interface ILightningProvider {
-  createWallet(userId: string, email: string): Promise<{
+  createWallet(userId: string, identity: string): Promise<{
     id: string;
     adminKey: string;
     invoiceKey: string;

@@ -2,29 +2,27 @@ import { APIGatewayProxyHandler } from 'aws-lambda';
 import { connectToDatabase } from '../../infrastructure/DbConfig';
 import { MongoUserRepository } from '../secondary/mongo/MongoUserRepository';
 import { MongoTransactionRepository } from '../secondary/mongo/MongoTransactionRepository';
+import { LNBitsService } from '../secondary/lnbits/LNBitsService';
+import { TransactionStatus } from '../../core/entities/Transaction';
 
 const userRepository = new MongoUserRepository();
 const transactionRepository = new MongoTransactionRepository();
+const lnBitsService = new LNBitsService();
 
 export const handler: APIGatewayProxyHandler = async (event) => {
   try {
-    const { email } = event.queryStringParameters || {};
+    const { identity } = event.queryStringParameters || {};
 
-    if (!email) {
+    if (!identity) {
       return {
         statusCode: 400,
         headers: { 'Access-Control-Allow-Origin': '*' },
-        body: JSON.stringify({ message: 'Email query parameter is required' }),
+        body: JSON.stringify({ message: 'Identity query parameter is required' }),
       };
     }
 
-    const start = Date.now();
     await connectToDatabase();
-    console.log(`DB Connected in ${Date.now() - start}ms`);
-
-    const userStart = Date.now();
-    const user = await userRepository.findByEmail(email);
-    console.log(`User found in ${Date.now() - userStart}ms`);
+    let user = await userRepository.findByIdentity(identity);
 
     if (!user) {
       return {
@@ -34,21 +32,73 @@ export const handler: APIGatewayProxyHandler = async (event) => {
       };
     }
 
+    // In local development or due to network issues, webhooks might fail.
+    // We check PENDING and recently EXPIRED transactions against LNBits to ensure balance is accurate.
     const transactions = await transactionRepository.findByUserId(user.id!);
-    console.log(`Transactions for ${user.email}: ${transactions.length}`);
-    console.log(`Types: ${transactions.map(t => t.type).join(', ')}`);
+    const now = new Date();
+    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
+
+    const transactionsToCheck = transactions.filter(tx => {
+        const isPending = tx.status.toUpperCase() === TransactionStatus.PENDING || tx.status.toLowerCase() === 'pending';
+        const isRecentExpired = tx.status.toUpperCase() === TransactionStatus.EXPIRED && tx.createdAt > oneHourAgo;
+        return isPending || isRecentExpired;
+    });
+
+    let balanceUpdated = false;
+    if (transactionsToCheck.length > 0) {
+        console.log(`🔍 Checking ${transactionsToCheck.length} transactions (Pending/Recent Expired) for ${identity}`);
+        for (const tx of transactionsToCheck) {
+            try {
+                const { paid } = await lnBitsService.checkPayment(tx.paymentHash, user.wallet.invoiceKey);
+                if (paid) {
+                    console.log(`✅ Found paid transaction: ${tx.paymentHash}. Completing...`);
+                    const completedTx = await transactionRepository.completeIfPending(tx.paymentHash);
+                    if (completedTx) {
+                        user.balance += completedTx.amount;
+                        balanceUpdated = true;
+                    }
+                }
+            } catch (e) {
+                console.warn(`⚠️ Failed to check payment for ${tx.paymentHash}:`, e);
+            }
+        }
+    }
+
+    // --- SECOND LAYER: REAL-TIME WALLET SYNC ---
+    // Use Admin Key for balance sync as it's more reliable in LNBits, fallback to invoiceKey
+    try {
+        const syncKey = user.wallet.adminKey || user.wallet.invoiceKey;
+        const realBalance = await lnBitsService.getWalletBalance(syncKey);
+        
+        // If DB balance is still behind or ahead (e.g. external payment acknowledged by LNBits but not by our DB), sync it.
+        if (user.balance !== realBalance) {
+            console.log(`⚖️ Balance mismatch! DB: ${user.balance} | LNBits: ${realBalance}. Syncing...`);
+            user.balance = realBalance;
+            balanceUpdated = true;
+        }
+
+        if (balanceUpdated) {
+            await userRepository.save(user);
+            console.log(`💰 User saved with updated balance: ${user.balance} sats`);
+        }
+    } catch (e) {
+        console.warn(`⚠️ Failed to sync real-time balance for ${identity}:`, e);
+    }
+
+    // Re-fetch transactions if status changed
+    const finalTransactions = await transactionRepository.findByUserId(user.id!);
 
     return {
       statusCode: 200,
       headers: { 'Access-Control-Allow-Origin': '*' },
       body: JSON.stringify({
         id: user.id,
-        email: user.email,
+        identity: user.identity,
         name: user.name,
         walletId: user.wallet.lnbitsId,
         balance: user.balance,
         nequiNumber: user.nequiNumber,
-        transactions: transactions.map(tx => ({
+        transactions: finalTransactions.map(tx => ({
           id: tx.id,
           amount: tx.amount,
           type: tx.type.toLowerCase(),

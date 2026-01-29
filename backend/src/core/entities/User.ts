@@ -1,7 +1,7 @@
 export class User {
   constructor(
     public readonly id: string | undefined, // Added ID
-    public readonly email: string,
+    public readonly identity: string,
     public readonly name: string,
     public readonly passwordHash: string,
     public kycLevel: number,

@@ -4,7 +4,7 @@ import { UserModel } from './UserModel';
 
 export class MongoUserRepository implements IUserRepository {
   async save(user: User): Promise<void> {
-    const existingUser = await UserModel.findOne({ email: user.email });
+    const existingUser = await UserModel.findOne({ identity: user.identity });
 
     if (existingUser) {
       existingUser.kycLevel = user.kycLevel;
@@ -16,7 +16,7 @@ export class MongoUserRepository implements IUserRepository {
     } else {
       await UserModel.create({
         _id: user.id, // Explicitly save the ID
-        email: user.email,
+        identity: user.identity,
         name: user.name,
         passwordHash: user.passwordHash,
         kycLevel: user.kycLevel,
@@ -28,8 +28,8 @@ export class MongoUserRepository implements IUserRepository {
     }
   }
 
-  async findByEmail(email: string): Promise<User | null> {
-    const doc = await UserModel.findOne({ email });
+  async findByIdentity(identity: string): Promise<User | null> {
+    const doc = await UserModel.findOne({ identity });
     if (!doc) return null;
     return this.toDomain(doc);
   }
@@ -43,7 +43,7 @@ export class MongoUserRepository implements IUserRepository {
   private toDomain(doc: any): User {
     return new User(
       doc._id.toString(), // Pass ID
-      doc.email,
+      doc.identity,
       doc.name,
       doc.passwordHash,
       doc.kycLevel,

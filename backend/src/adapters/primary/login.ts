@@ -10,17 +10,17 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     await connectToDatabase();
 
     const body = JSON.parse(event.body || '{}');
-    const { email, password } = body;
+    const { identity, password } = body;
 
-    if (!email || !password) {
+    if (!identity || !password) {
       return {
         statusCode: 400,
         headers: { 'Access-Control-Allow-Origin': '*' },
-        body: JSON.stringify({ message: 'Email and password are required' }),
+        body: JSON.stringify({ message: 'Identity and password are required' }),
       };
     }
 
-    const user = await userRepository.findByEmail(email);
+    const user = await userRepository.findByIdentity(identity);
     if (!user) {
       return {
         statusCode: 401,
@@ -45,7 +45,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
         message: 'Login successful',
         user: {
           id: user.id,
-          email: user.email,
+          identity: user.identity,
           name: user.name,
           walletId: user.wallet.lnbitsId,
           balance: user.balance,

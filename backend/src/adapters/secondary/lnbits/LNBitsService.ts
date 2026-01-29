@@ -14,7 +14,7 @@ export class LNBitsService implements ILightningProvider {
     }
   }
 
-  async createWallet(userId: string, email: string): Promise<{
+  async createWallet(userId: string, identity: string): Promise<{
     id: string;
     adminKey: string;
     invoiceKey: string;
@@ -36,15 +36,18 @@ export class LNBitsService implements ILightningProvider {
       console.log('🔗 Calling LNBits URL:', `${this.apiUrl}/usermanager/api/v1/users`);
       console.log('🔑 Using Master Key:', masterKey ? `${masterKey.substring(0, 4)}...` : 'NONE');
       
+      // We use a descriptive name for LNBits User Manager to list it correctly.
+      // brand model (btv_...) format
       const response = await axios.post(
         `${this.apiUrl}/usermanager/api/v1/users`,
         {
-          user_name: userId,
-          wallet_name: 'Biterva Wallet',
-          email: email,
+          user_name: identity, // Secondary identifier 
+          wallet_name: identity, // Use the full identity descriptive name
+          admin_id: masterKey, // Potential fix for extension scoping
+          email: identity.includes('@') ? identity : `${identity}@biterva.app`,
           extra: {
             mongo_id: userId,
-            email: email
+            identity: identity
           }
         },
         {
@@ -138,6 +141,24 @@ export class LNBitsService implements ILightningProvider {
     } catch (error) {
       console.error('Error checking payment:', error);
       throw new Error('Failed to check payment status');
+    }
+  }
+
+  async getWalletBalance(invoiceKey: string): Promise<number> {
+    try {
+      const response = await axios.get(
+        `${this.apiUrl}/api/v1/wallet`,
+        {
+          headers: {
+            'X-Api-Key': invoiceKey,
+          },
+        }
+      );
+      // LNBits returns balance in msats, we return sats
+      return Math.floor(response.data.balance / 1000);
+    } catch (error) {
+      console.error('Error fetching wallet balance from LNBits:', error);
+      throw new Error('Failed to fetch wallet balance');
     }
   }
 

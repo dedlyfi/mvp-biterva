@@ -18,7 +18,7 @@ export const handler: SQSHandler = async (event) => {
       console.log('Processing event:', body);
 
       if (body.type === 'UserCreatedEvent') {
-        const { userId, email } = body;
+        const { userId, identity } = body;
 
         // Example Rule: "Signup Bonus" - Give 100 sats
         // Disabled per user request
@@ -30,17 +30,8 @@ export const handler: SQSHandler = async (event) => {
           continue;
         }
 
-        // Logic to credit user (simulated directly on DB for now as LNBits 'createInvoice' is for receiving)
-        // If we wanted to "give" them sats in LNBits, we would need to pay an invoice provided by them
-        // or just track it in our DB balance if it's an internal ledger.
-        // The prompt says: "credits Sats to the user's balance/wallet". 
-        // We'll update our DB balance.
+        // ... logic ...
         
-        // In a real scenario with LNBits, if we hold the wallet admin key, 
-        // we might not "send" payment, but just acknowledge they have balance.
-        // OR if this was a faucet, we'd pay an invoice they generate.
-        
-        // Let's simply update the DB balance as a 'reward'.
         user.balance += bonusAmount;
         user.rewardsHistory.push({
           amount: bonusAmount,
@@ -49,7 +40,7 @@ export const handler: SQSHandler = async (event) => {
         });
 
         await user.save();
-        console.log(`Credited ${bonusAmount} sats to user ${email}`);
+        console.log(`Credited ${bonusAmount} sats to user ${identity}`);
       }
     } catch (error) {
       console.error('Error processing record:', error);

@@ -1,22 +1,22 @@
 /**
  * @example {
- *   "email": "user@example.com"
+ *   "identity": "btv_xyz123"
  * }
  */
 export interface SignupRequest {
-  email: string;
+  identity: string;
   name: string;
   password: string;
 }
 
 /**
  * @example {
- *   "email": "user@example.com",
+ *   "identity": "btv_xyz123",
  *   "password": "secretpassword"
  * }
  */
 export interface LoginRequest {
-  email: string;
+  identity: string;
   password: string;
 }
 
@@ -25,7 +25,7 @@ export interface LoginRequest {
  *   "message": "User created successfully",
  *   "user": {
  *     "id": "696d8f7631fb957bc0d01a45",
- *     "email": "user@example.com",
+ *     "identity": "btv_xyz123",
  *     "name": "Jose Berna",
  *     "walletId": "wallet123"
  *   }
@@ -35,7 +35,7 @@ export interface UserResponse {
   message: string;
   user: {
     id: string;
-    email: string;
+    identity: string;
     name: string;
     walletId: string;
   };

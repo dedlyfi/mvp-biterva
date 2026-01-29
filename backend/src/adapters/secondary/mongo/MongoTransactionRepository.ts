@@ -84,22 +84,24 @@ export class MongoTransactionRepository implements ITransactionRepository {
   }
 
   async completeIfPending(paymentHash: string): Promise<Transaction | null> {
+    const pendingStatus = [TransactionStatus.PENDING, 'pending'];
+    
     let doc = await TransactionModel.findOneAndUpdate(
-      { paymentHash, status: TransactionStatus.PENDING },
+      { paymentHash, status: { $in: pendingStatus } },
       { $set: { status: TransactionStatus.COMPLETED, updatedAt: new Date() } },
       { new: true }
     );
     if (doc) return this.toDomain(doc);
 
     doc = await PaymentModel.findOneAndUpdate(
-        { paymentHash, status: TransactionStatus.PENDING },
+        { paymentHash, status: { $in: pendingStatus } },
         { $set: { status: TransactionStatus.COMPLETED, updatedAt: new Date() } },
         { new: true }
       );
     if (doc) return this.toDomain(doc);
 
     doc = await WithdrawalModel.findOneAndUpdate(
-        { paymentHash, status: TransactionStatus.PENDING },
+        { paymentHash, status: { $in: pendingStatus } },
         { $set: { status: TransactionStatus.COMPLETED, updatedAt: new Date() } },
         { new: true }
       );

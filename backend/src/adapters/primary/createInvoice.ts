@@ -42,8 +42,8 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
     // 1. Get User
     let user = await userRepository.findById(userId);
-    if (!user && userId.includes('@')) {
-        user = await userRepository.findByEmail(userId);
+    if (!user && (userId.startsWith('btv_') || userId.includes('('))) {
+        user = await userRepository.findByIdentity(userId);
     }
     
     if (!user) {
@@ -54,11 +54,8 @@ export const handler: APIGatewayProxyHandler = async (event) => {
       };
     }
 
-    // 1.5 Clean up any previous PENDING invoices for this user (Previene duplicación/ruido en la lista)
-    await transactionRepository.markPendingAsExpired(user.id!);
-
     // 2. Call LNBits
-    console.log(`Creating invoice for ${user.email} Amount: ${amount} fiat: ${fiatAmount} ${fiatCurrency} webhook: ${WEBHOOK_URL}`);
+    console.log(`Creating invoice for ${user.identity} Amount: ${amount} fiat: ${fiatAmount} ${fiatCurrency} webhook: ${WEBHOOK_URL}`);
     console.log(`🔑 Using Invoice Key: ${user.wallet.invoiceKey.substring(0, 8)}...`);
     
     const { paymentHash, paymentRequest } = await lnBitsService.createInvoice(
