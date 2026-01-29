@@ -14,7 +14,6 @@ const serverlessConfiguration = {
       shouldStartNameWithService: true,
     },
     environment: {
-      AWS_REGION: '${env:AWS_REGION}',
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
       MONGODB_URI: '${env:MONGODB_URI, "mongodb://localhost:27017/biterva"}',
@@ -25,7 +24,8 @@ const serverlessConfiguration = {
       TROKERA_API_URL: '${env:TROKERA_API_URL}',
       TROKERA_API_KEY: '${env:TROKERA_API_KEY}',
       TROKERA_SECRET_KEY: '${env:TROKERA_SECRET_KEY}',
-      GAMIFICATION_QUEUE_URL: 'http://localhost:9324/queue/GamificationQueue',
+      GAMIFICATION_QUEUE_URL: { Ref: 'GamificationQueue' },
+      WITHDRAWAL_QUEUE_URL: { Ref: 'WithdrawalQueue' },
       MOCK_LNBITS: '${env:MOCK_LNBITS, "false"}',
     },
     iam: {
@@ -34,9 +34,10 @@ const serverlessConfiguration = {
           {
             Effect: 'Allow',
             Action: ['sqs:SendMessage', 'sqs:ReceiveMessage'],
-            Resource: {
-              'Fn::GetAtt': ['GamificationQueue', 'Arn'],
-            },
+            Resource: [
+              { 'Fn::GetAtt': ['GamificationQueue', 'Arn'] },
+              { 'Fn::GetAtt': ['WithdrawalQueue', 'Arn'] },
+            ],
           },
         ],
       },

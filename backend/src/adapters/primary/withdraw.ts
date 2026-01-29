@@ -117,7 +117,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
             await sqs.sendMessage({
                 QueueUrl: process.env.IS_OFFLINE 
                     ? 'http://localhost:9324/queue/WithdrawalQueue' 
-                    : process.env.GAMIFICATION_QUEUE_URL?.replace('GamificationQueue', 'WithdrawalQueue'), // Hacky fallback if var not present, or better use specific var
+                    : process.env.WITHDRAWAL_QUEUE_URL,
                 MessageBody: JSON.stringify({
                     transactionId,
                     userId,
