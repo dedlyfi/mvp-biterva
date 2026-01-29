@@ -52,21 +52,15 @@ export const handler: SQSHandler = async (event: SQSEvent) => {
           continue;
       }
 
-      const isDev = process.env.IS_OFFLINE === 'true' || process.env.NODE_ENV === 'development';
-      
-      if (isDev) {
-          console.warn('⚠️ [DEV MODE] Skipping real LNBits payment. Simulating success...');
-      } else {
-          try {
-             await lnbitsService.payInvoice(user.wallet.adminKey, trokeraInvoice.bolt11);
-          } catch (e: any) {
-             console.error('LNBits Payment Failed:', e);
-             await failTransaction(transaction, 'Payment Failed: ' + e.message);
-             // Should we refund if it failed *during* payment? 
-             // If payInvoice throws, funds likely didn't move or are stuck pending. 
-             // For now, mark failed.
-             continue;
-          }
+      try {
+          await lnbitsService.payInvoice(user.wallet.adminKey, trokeraInvoice.bolt11);
+      } catch (e: any) {
+          console.error('LNBits Payment Failed:', e);
+          await failTransaction(transaction, 'Payment Failed: ' + e.message);
+          // Should we refund if it failed *during* payment? 
+          // If payInvoice throws, funds likely didn't move or are stuck pending. 
+          // For now, mark failed.
+          continue;
       }
 
       // Update Transaction to FUNDED

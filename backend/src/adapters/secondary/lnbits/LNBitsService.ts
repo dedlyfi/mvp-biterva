@@ -22,15 +22,6 @@ export class LNBitsService implements ILightningProvider {
     // Use MASTER_WALLET_ADMIN_KEY for user manager operations
     const masterKey = process.env.LNBITS_MASTER_WALLET_ADMIN_KEY || process.env.MASTER_WALLET_ADMIN_KEY || this.adminKey;
 
-    // Mock Mode for Local Development (Bypass LNBits)
-    if (process.env.MOCK_LNBITS === 'true') {
-      console.warn('⚠️ USING MOCK LNBITS SERVICE');
-      return {
-        id: 'mock-wallet-' + Math.random().toString(36).substring(7),
-        adminKey: 'mock-admin-key',
-        invoiceKey: 'mock-invoice-key',
-      };
-    }
 
     try {
       console.log('🔗 Calling LNBits URL:', `${this.apiUrl}/usermanager/api/v1/users`);
@@ -93,6 +84,8 @@ export class LNBitsService implements ILightningProvider {
   }> {
     console.log(`🔗 LNBits API Request: POST ${this.apiUrl}/api/v1/payments`);
     console.log(`🔑 Key: ${invoiceKey.substring(0, 8)}...`);
+
+
     try {
       const response = await axios.post(
         `${this.apiUrl}/api/v1/payments`,
@@ -125,6 +118,7 @@ export class LNBitsService implements ILightningProvider {
   ): Promise<{
     paid: boolean;
   }> {
+
     try {
       const response = await axios.get(
         `${this.apiUrl}/api/v1/payments/${paymentHash}`,
@@ -145,6 +139,7 @@ export class LNBitsService implements ILightningProvider {
   }
 
   async getWalletBalance(invoiceKey: string): Promise<number> {
+
     try {
       const response = await axios.get(
         `${this.apiUrl}/api/v1/wallet`,
@@ -168,6 +163,7 @@ export class LNBitsService implements ILightningProvider {
   ): Promise<{
     paymentHash: string;
   }> {
+
     try {
       const response = await axios.post(
         `${this.apiUrl}/api/v1/payments`,
@@ -199,6 +195,7 @@ export class LNBitsService implements ILightningProvider {
     amount: number;
     memo: string;
   }> {
+
       try {
           console.log(`Decoding invoice: ${bolt11}`);
           const response = await axios.post(

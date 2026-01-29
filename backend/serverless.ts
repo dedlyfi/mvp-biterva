@@ -26,6 +26,7 @@ const serverlessConfiguration = {
       TROKERA_API_KEY: '${env:TROKERA_API_KEY}',
       TROKERA_SECRET_KEY: '${env:TROKERA_SECRET_KEY}',
       GAMIFICATION_QUEUE_URL: 'http://localhost:9324/queue/GamificationQueue',
+      MOCK_LNBITS: '${env:MOCK_LNBITS, "false"}',
     },
     iam: {
       role: {

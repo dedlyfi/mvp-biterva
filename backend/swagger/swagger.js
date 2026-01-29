@@ -318,8 +318,8 @@
   "definitions": {
     "SignupRequest": {
       "properties": {
-        "email": {
-          "title": "SignupRequest.email",
+        "identity": {
+          "title": "SignupRequest.identity",
           "type": "string"
         },
         "name": {
@@ -332,19 +332,19 @@
         }
       },
       "required": [
-        "email",
+        "identity",
         "name",
         "password"
       ],
       "additionalProperties": false,
       "title": "SignupRequest",
-      "examples": "{\n\"email\": \"user@example.com\"\n}",
+      "examples": "{\n\"identity\": \"btv_xyz123\"\n}",
       "type": "object"
     },
     "LoginRequest": {
       "properties": {
-        "email": {
-          "title": "LoginRequest.email",
+        "identity": {
+          "title": "LoginRequest.identity",
           "type": "string"
         },
         "password": {
@@ -353,12 +353,12 @@
         }
       },
       "required": [
-        "email",
+        "identity",
         "password"
       ],
       "additionalProperties": false,
       "title": "LoginRequest",
-      "examples": "{\n\"email\": \"user@example.com\",\n\"password\": \"secretpassword\"\n}",
+      "examples": "{\n\"identity\": \"btv_xyz123\",\n\"password\": \"secretpassword\"\n}",
       "type": "object"
     },
     "UserResponse": {
@@ -373,8 +373,8 @@
               "title": "UserResponse.user.id",
               "type": "string"
             },
-            "email": {
-              "title": "UserResponse.user.email",
+            "identity": {
+              "title": "UserResponse.user.identity",
               "type": "string"
             },
             "name": {
@@ -388,7 +388,7 @@
           },
           "required": [
             "id",
-            "email",
+            "identity",
             "name",
             "walletId"
           ],
@@ -403,7 +403,7 @@
       ],
       "additionalProperties": false,
       "title": "UserResponse",
-      "examples": "{\n\"message\": \"User created successfully\",\n\"user\": {\n\"id\": \"696d8f7631fb957bc0d01a45\",\n\"email\": \"user@example.com\",\n\"name\": \"Jose Berna\",\n\"walletId\": \"wallet123\"\n}\n}",
+      "examples": "{\n\"message\": \"User created successfully\",\n\"user\": {\n\"id\": \"696d8f7631fb957bc0d01a45\",\n\"identity\": \"btv_xyz123\",\n\"name\": \"Jose Berna\",\n\"walletId\": \"wallet123\"\n}\n}",
       "type": "object"
     },
     "ErrorResponse": {
