@@ -3808,3 +3808,61 @@
 2026-01-23 19:42:20.555 [ERR] LTND: Shutting down because error in main method: error creating wallet config: unable to set up wallet password listeners: shutting down
 2026-01-23 19:42:20.556 [INF] LTND: Shutdown complete
 
+2026-01-28 21:06:27.685 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-28 21:06:27.686 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-28 21:06:27.686 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-28 21:06:27.697 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-28 21:06:27.731 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-28 21:06:27.732 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-28 21:06:27.734 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-28 21:06:27.739 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-28 21:06:27.744 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-28 21:06:27.744 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-28 21:06:27.745 [INF] LTND: Database(s) now open (time_to_open=9.088125ms)!
+2026-01-28 21:06:27.754 [INF] BTCN: Loaded 287 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-28 21:06:27.755 [INF] BTCN: Registering block subscription: id=1
+2026-01-28 21:06:27.756 [INF] BTCN: Broadcaster now active
+2026-01-28 21:06:27.760 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-28 21:06:27.760 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-28 21:06:27.783 [INF] CMGR: 13 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-28 21:06:27.850 [INF] CMGR: 39 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-28 21:06:27.946 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-28 21:06:27.958 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io
+2026-01-28 21:06:27.974 [INF] CMGR: 24 addresses found from DNS seed x49.seed.bitcoinstats.com
+2026-01-28 21:06:29.371 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-28 21:06:29.875 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-28 21:06:30.887 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-28 21:06:31.869 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-28 21:06:32.893 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-28 21:06:36.922 [ERR] RPCS: [/lnrpc.Lightning/ChannelBalance]: wallet locked, unlock it to enable full RPC access
+2026-01-28 21:57:45.901 [INF] LTND: Received terminated
+2026-01-28 21:57:45.902 [INF] LTND: Shutting down...
+2026-01-28 21:57:45.903 [INF] LTND: Gracefully shutting down.
+2026-01-28 21:57:45.904 [ERR] LTND: unable to set up wallet password listeners: shutting down
+2026-01-28 21:57:45.904 [INF] BTCN: Canceling block subscription: id=1
+2026-01-28 21:57:45.957 [INF] BTCN: Block manager shutting down
+2026-01-28 21:57:45.957 [INF] BTCN: Address manager shutting down
+2026-01-28 21:57:45.959 [ERR] LTND: Shutting down because error in main method: error creating wallet config: unable to set up wallet password listeners: shutting down
+2026-01-28 21:57:45.961 [INF] LTND: Shutdown complete
+2026-01-28 21:58:02.023 [WRN] LTND: open /root/.lnd/lnd.conf: no such file or directory
+2026-01-28 21:58:02.023 [INF] LTND: Version: 0.17.3-beta commit=v0.17.3-beta, build=production, logging=default, debuglevel=info
+2026-01-28 21:58:02.023 [INF] LTND: Active chain: Bitcoin (network=mainnet)
+2026-01-28 21:58:02.024 [INF] RPCS: RPC server listening on 0.0.0.0:10009
+2026-01-28 21:58:02.029 [INF] RPCS: gRPC proxy started at 0.0.0.0:8080
+2026-01-28 21:58:02.029 [INF] LTND: Opening the main database, this might take a few minutes...
+2026-01-28 21:58:02.031 [INF] LTND: Opening bbolt database, sync_freelist=false, auto_compact=false
+2026-01-28 21:58:02.032 [INF] LTND: Creating local graph and channel state DB instances
+2026-01-28 21:58:02.034 [INF] CHDB: Checking for schema update: latest_version=31, db_version=31
+2026-01-28 21:58:02.034 [INF] CHDB: Checking for optional update: prune_revocation_log=false, db_version=empty
+2026-01-28 21:58:02.034 [INF] LTND: Database(s) now open (time_to_open=2.942708ms)!
+2026-01-28 21:58:02.038 [INF] BTCN: Loaded 442 addresses from file '/root/.lnd/data/chain/bitcoin/mainnet/peers.json'
+2026-01-28 21:58:02.038 [INF] BTCN: Registering block subscription: id=1
+2026-01-28 21:58:02.038 [INF] BTCN: Broadcaster now active
+2026-01-28 21:58:02.038 [INF] LTND: We're not running within systemd or the service type is not 'notify'
+2026-01-28 21:58:02.038 [INF] LTND: Waiting for wallet encryption password. Use `lncli create` to create a wallet, `lncli unlock` to unlock an existing wallet, or `lncli changepassword` to change the password of an existing wallet and unlock it.
+2026-01-28 21:58:02.164 [INF] CMGR: 14 addresses found from DNS seed x49.seed.bitcoin.sipa.be
+2026-01-28 21:58:02.164 [INF] CMGR: 31 addresses found from DNS seed x49.dnsseed.bluematt.me
+2026-01-28 21:58:02.175 [INF] CMGR: 36 addresses found from DNS seed dnsseed.bitcoin.dashjr.org
+2026-01-28 21:58:02.295 [INF] CMGR: DNS discovery failed on seed x49.seed.bitcoinstats.com: lookup x49.seed.bitcoinstats.com on 127.0.0.11:53: no such host
+2026-01-28 21:58:02.297 [INF] CMGR: 13 addresses found from DNS seed x49.seed.bitcoin.jonasschnelli.ch
+2026-01-28 21:58:02.297 [INF] CMGR: 40 addresses found from DNS seed seed.bitnodes.io

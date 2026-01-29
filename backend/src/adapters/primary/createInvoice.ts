@@ -59,6 +59,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
     // 2. Call LNBits
     console.log(`Creating invoice for ${user.email} Amount: ${amount} fiat: ${fiatAmount} ${fiatCurrency} webhook: ${WEBHOOK_URL}`);
+    console.log(`🔑 Using Invoice Key: ${user.wallet.invoiceKey.substring(0, 8)}...`);
     
     const { paymentHash, paymentRequest } = await lnBitsService.createInvoice(
       user.wallet.lnbitsId,

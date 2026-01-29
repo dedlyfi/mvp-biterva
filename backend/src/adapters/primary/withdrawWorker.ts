@@ -3,7 +3,7 @@ import { SQSEvent, SQSHandler } from 'aws-lambda';
 import { connectToDatabase } from '../../infrastructure/DbConfig';
 import { MongoUserRepository } from '../secondary/mongo/MongoUserRepository';
 import { MongoTransactionRepository } from '../secondary/mongo/MongoTransactionRepository';
-import { LNBitsService } from '../secondary/lnbits/LnbitsService';
+import { LNBitsService } from '../secondary/lnbits/LNBitsService';
 import { TrokeraService } from '../secondary/trokera/TrokeraService';
 import { Transaction, TransactionStatus } from '../../core/entities/Transaction';
 

@@ -2,7 +2,7 @@ import { APIGatewayProxyHandler } from 'aws-lambda';
 import * as AWS from 'aws-sdk';
 import { MongoUserRepository } from '../secondary/mongo/MongoUserRepository';
 import { MongoTransactionRepository } from '../secondary/mongo/MongoTransactionRepository';
-import { LNBitsService } from '../secondary/lnbits/LnbitsService';
+import { LNBitsService } from '../secondary/lnbits/LNBitsService';
 import { TrokeraService } from '../secondary/trokera/TrokeraService';
 import { Transaction, TransactionStatus, TransactionType } from '../../core/entities/Transaction';
 import { WithdrawRequest, WithdrawResponse, ErrorResponse } from './api-types';

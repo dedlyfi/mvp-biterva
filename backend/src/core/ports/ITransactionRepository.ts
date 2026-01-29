@@ -7,4 +7,5 @@ export interface ITransactionRepository {
   findByUserId(userId: string): Promise<Transaction[]>;
   completeIfPending(paymentHash: string): Promise<Transaction | null>;
   markPendingAsExpired(userId: string): Promise<void>;
+  findById(id: string): Promise<Transaction | null>;
 }

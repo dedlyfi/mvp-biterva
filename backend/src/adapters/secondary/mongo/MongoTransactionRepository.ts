@@ -58,6 +58,12 @@ export class MongoTransactionRepository implements ITransactionRepository {
     return this.toDomain(doc);
   }
 
+  async findById(id: string): Promise<Transaction | null> {
+    const doc = await this.findOneInAll({ _id: id });
+    if (!doc) return null;
+    return this.toDomain(doc);
+  }
+
   async findByHashAndUser(paymentHash: string, userId: string): Promise<Transaction | null> {
     const doc = await this.findOneInAll({ paymentHash, userId });
     if (!doc) return null;

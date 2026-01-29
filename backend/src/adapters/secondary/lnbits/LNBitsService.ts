@@ -88,6 +88,8 @@ export class LNBitsService implements ILightningProvider {
     paymentHash: string;
     paymentRequest: string;
   }> {
+    console.log(`🔗 LNBits API Request: POST ${this.apiUrl}/api/v1/payments`);
+    console.log(`🔑 Key: ${invoiceKey.substring(0, 8)}...`);
     try {
       const response = await axios.post(
         `${this.apiUrl}/api/v1/payments`,
@@ -108,9 +110,9 @@ export class LNBitsService implements ILightningProvider {
         paymentHash: response.data.payment_hash,
         paymentRequest: response.data.payment_request,
       };
-    } catch (error) {
-      console.error('Error creating invoice:', error);
-      throw new Error('Failed to create Lightning Invoice');
+    } catch (error: any) {
+      console.error('Error creating invoice:', error.response?.data || error.message);
+      throw new Error(`Failed to create Lightning Invoice: ${JSON.stringify(error.response?.data || error.message)}`);
     }
   }
 

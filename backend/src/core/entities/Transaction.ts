@@ -27,7 +27,7 @@ export class Transaction {
     public updatedAt: Date,
     public readonly fiatAmount?: number,
     public readonly fiatCurrency?: string,
-    public readonly metadata?: Record<string, any>
+    public metadata?: Record<string, any>
   ) {}
 
   public markAsCompleted(): void {

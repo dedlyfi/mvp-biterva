@@ -31,7 +31,7 @@ jest.mock('../secondary/mongo/MongoTransactionRepository', () => {
   };
 });
 
-jest.mock('../secondary/lnbits/LnbitsService', () => {
+jest.mock('../secondary/lnbits/LNBitsService', () => {
   return {
     LNBitsService: jest.fn().mockImplementation(() => ({
       payInvoice: mockPayInvoice,

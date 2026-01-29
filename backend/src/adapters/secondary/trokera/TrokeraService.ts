@@ -62,6 +62,9 @@ export class TrokeraService {
       if (error.response?.data?.message?.includes('network')) {
         console.warn('⚠️ Check network parameter: LN vs BTC-LN vs LIGHTNING');
       }
+      throw error;
+    }
+  }
 
   async swap(sourceCurrency: string, targetCurrency: string, amount: number): Promise<{ success: boolean; swapId: string }> {
     console.log(`🔗 Mocking Trokera Swap: ${amount} ${sourceCurrency} -> ${targetCurrency}`);
