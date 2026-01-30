@@ -6,22 +6,37 @@ let cachedPrice: number | null = null;
 let lastFetchTime: number = 0;
 const CACHE_DURATION = 2 * 60 * 1000; // 2 minutes
 
+// LNBits Health Check
+const LNBITS_URL = process.env.LNBITS_API_URL || 'http://3.132.82.187:7777';
+
+const checkLNBits = async (): Promise<boolean> => {
+    try {
+        await axios.get(`${LNBITS_URL}/api/v1/health`, { timeout: 2000 });
+        return true;
+    } catch (e) {
+        return false;
+    }
+};
+
 export const handler: APIGatewayProxyHandler = async () => {
+  const isNodeOnline = await checkLNBits();
+  
   try {
     const now = Date.now();
     if (cachedPrice && now - lastFetchTime < CACHE_DURATION) {
-      console.log('Returning cached price:', cachedPrice);
       return {
         statusCode: 200,
         headers: { 
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json' 
         },
-        body: JSON.stringify({ cop: cachedPrice }),
+        body: JSON.stringify({ 
+            cop: cachedPrice,
+            nodeOnline: isNodeOnline
+        }),
       };
     }
 
-    console.log('Fetching new price from CoinGecko...');
     const response = await axios.get(
       'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=cop'
     );
@@ -36,17 +51,23 @@ export const handler: APIGatewayProxyHandler = async () => {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json' 
       },
-      body: JSON.stringify({ cop: price }),
+      body: JSON.stringify({ 
+          cop: price,
+          nodeOnline: isNodeOnline
+      }),
     };
   } catch (error) {
     console.error('Error fetching BTC price:', error);
     return {
-      statusCode: 200, // Still return 200 to avoid breaking UI, use fallback
+      statusCode: 200, 
       headers: { 
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json' 
       },
-      body: JSON.stringify({ cop: cachedPrice || 400000000 }), // Fallback to 400M COP
+      body: JSON.stringify({ 
+          cop: cachedPrice || 400000000, 
+          nodeOnline: isNodeOnline
+      }),
     };
   }
 };

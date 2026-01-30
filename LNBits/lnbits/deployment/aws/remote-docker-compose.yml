@@ -1,0 +1,56 @@
+services:
+  tor:
+    image: alpine
+    container_name: lnbits-tor
+    command: >
+      sh -c "apk add --no-cache tor &&
+             tor --SocksPort 0.0.0.0:9050 --DataDirectory /tmp/tor --CookieAuthentication 0"
+    restart: always
+
+  lnd:
+    image: lightninglabs/lnd:v0.17.3-beta
+    container_name: lnbits-lnd
+    dns:
+      - 8.8.8.8
+    volumes:
+      - ./lnd-data:/root/.lnd
+    ports:
+      - "10009:10009"
+      - "8080:8080"
+      - "9735:9735"
+    command: >
+      lnd
+      --bitcoin.active
+      --bitcoin.mainnet
+      --bitcoin.node=neutrino
+      --neutrino.addpeer=btcd.lnolymp.us
+      --neutrino.maxpeers=20
+      --feeurl=https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json
+      --restlisten=0.0.0.0:8080
+      --rpclisten=0.0.0.0:10009
+      --tlsextradomain=lnbits-lnd
+      --tlsextradomain=lnd
+      --tlsextraip=127.0.0.1
+      --tlsextraip=3.132.82.187
+      --wallet-unlock-password-file=/root/.lnd/password.txt
+      --debuglevel=info
+      --tor.active
+      --tor.socks=tor:9050
+      --tor.control=tor:9051
+    depends_on:
+      - tor
+    restart: always
+
+  lnbits:
+    image: lnbits/lnbits:v1.4.1-rc2
+    container_name: lnbits-main
+    ports:
+      - "7777:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+      - ./lnd-data:/lnd-data-ro:ro
+      - ./extensions:/app/lnbits/extensions
+    restart: always

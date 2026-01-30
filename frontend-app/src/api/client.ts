@@ -2,14 +2,21 @@ import axios from 'axios';
 
 import { API_URL as ENV_API_URL } from '@env';
 
-export const API_URL = ENV_API_URL || 'http://192.168.1.53:3001/dev'; 
+const FALLBACK_URL = 'https://1awj7cx5ol.execute-api.us-east-2.amazonaws.com/dev';
+const getFinalUrl = () => {
+    const rawUrl = String(ENV_API_URL || FALLBACK_URL).trim();
+    return rawUrl.startsWith('http') ? rawUrl : `https://${rawUrl}`;
+};
+
+export const API_URL = getFinalUrl();
 
 export const client = axios.create({
   baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json',
+    'Accept': 'application/json',
   },
-  timeout: 10000,
+  timeout: 15000, 
 });
 
 client.interceptors.response.use(

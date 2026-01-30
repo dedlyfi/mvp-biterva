@@ -1,0 +1,179 @@
+{
+    "Reservations": [
+        {
+            "ReservationId": "r-0c85e2c41f6fa5dde",
+            "OwnerId": "504284203337",
+            "RequesterId": "043320173835",
+            "Groups": [],
+            "Instances": [
+                {
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2026-01-29T20:36:48+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-09650254a5f8a0052"
+                            }
+                        }
+                    ],
+                    "ClientToken": "5c1dafe4-60b6-ac70-7e39-b1740b5ef9b5",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "504284203337",
+                                "PublicDnsName": "ec2-3-132-82-187.us-east-2.compute.amazonaws.com",
+                                "PublicIp": "3.132.82.187"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2026-01-29T20:36:47+00:00",
+                                "AttachmentId": "eni-attach-0f3f40f831e163f62",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-0f008db9ca8fe449d",
+                                    "GroupName": "Biterva-LNBits-Prod-LNBitsSecurityGroup-lXbzQseXwY63"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:21:f9:65:7f:27",
+                            "NetworkInterfaceId": "eni-075b2754d54c3986e",
+                            "OwnerId": "504284203337",
+                            "PrivateDnsName": "ip-172-31-18-195.us-east-2.compute.internal",
+                            "PrivateIpAddress": "172.31.18.195",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "504284203337",
+                                        "PublicDnsName": "ec2-3-132-82-187.us-east-2.compute.amazonaws.com",
+                                        "PublicIp": "3.132.82.187"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-31-18-195.us-east-2.compute.internal",
+                                    "PrivateIpAddress": "172.31.18.195"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-092f2397826f835fd",
+                            "VpcId": "vpc-0aeb65a33485813be",
+                            "InterfaceType": "interface",
+                            "Operator": {
+                                "Managed": false
+                            }
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-0f008db9ca8fe449d",
+                            "GroupName": "Biterva-LNBits-Prod-LNBitsSecurityGroup-lXbzQseXwY63"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "aws:cloudformation:stack-id",
+                            "Value": "arn:aws:cloudformation:us-east-2:504284203337:stack/Biterva-LNBits-Prod/32b0f990-fd52-11f0-9348-02b561ac10b1"
+                        },
+                        {
+                            "Key": "aws:cloudformation:logical-id",
+                            "Value": "LNBitsInstance"
+                        },
+                        {
+                            "Key": "aws:cloudformation:stack-name",
+                            "Value": "Biterva-LNBits-Prod"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "Biterva-LNBits-Production"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "required",
+                        "HttpPutResponseHopLimit": 2,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "BootMode": "uefi-preferred",
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2026-01-29T20:36:47+00:00",
+                    "PrivateDnsNameOptions": {
+                        "HostnameType": "ip-name",
+                        "EnableResourceNameDnsARecord": false,
+                        "EnableResourceNameDnsAAAARecord": false
+                    },
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default",
+                        "RebootMigration": "default"
+                    },
+                    "CurrentInstanceBootMode": "uefi",
+                    "NetworkPerformanceOptions": {
+                        "BandwidthWeighting": "default"
+                    },
+                    "Operator": {
+                        "Managed": false
+                    },
+                    "InstanceId": "i-0fe41505c0ab2566e",
+                    "ImageId": "ami-09040d770ffe2224f",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "PrivateDnsName": "ip-172-31-18-195.us-east-2.compute.internal",
+                    "PublicDnsName": "ec2-3-132-82-187.us-east-2.compute.amazonaws.com",
+                    "StateTransitionReason": "User initiated (2026-01-30 00:49:58 GMT)",
+                    "KeyName": "biterva-lnbits-key",
+                    "AmiLaunchIndex": 0,
+                    "ProductCodes": [],
+                    "InstanceType": "t3.small",
+                    "LaunchTime": "2026-01-29T20:36:47+00:00",
+                    "Placement": {
+                        "GroupName": "",
+                        "Tenancy": "default",
+                        "AvailabilityZone": "us-east-2b"
+                    },
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "SubnetId": "subnet-092f2397826f835fd",
+                    "VpcId": "vpc-0aeb65a33485813be",
+                    "PrivateIpAddress": "172.31.18.195",
+                    "PublicIpAddress": "3.132.82.187"
+                }
+            ]
+        }
+    ]
+}

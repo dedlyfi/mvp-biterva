@@ -8,7 +8,7 @@ import clsx from 'clsx';
 const appIcon = require('../assets/images/app_icon.png');
 
 export const HomeScreen = ({ navigation }: any) => {
-  const { balance, transactions, syncBalance, isLoading, btcPrice, fetchPrice } = useWalletStore();
+  const { balance, transactions, syncBalance, isLoading, btcPrice, fetchPrice, nodeOnline } = useWalletStore();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
@@ -52,9 +52,15 @@ export const HomeScreen = ({ navigation }: any) => {
           <Menu color="#EAB308" size={28} />
         </TouchableOpacity>
         
-        <View className="bg-yellow-500/10 px-4 py-2 rounded-full border border-yellow-500/20">
-            <Text className="text-yellow-500 font-black text-xs uppercase tracking-widest">Mainnet Node</Text>
-        </View>
+        {nodeOnline ? (
+            <View className="bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20">
+                <Text className="text-emerald-500 font-black text-xs uppercase tracking-widest">LNBits network</Text>
+            </View>
+        ) : (
+            <View className="bg-orange-500/10 px-4 py-2 rounded-full border border-orange-500/20">
+                <Text className="text-orange-500 font-black text-xs uppercase tracking-widest">Demo Mode</Text>
+            </View>
+        )}
       </View>
 
       <ScrollView 

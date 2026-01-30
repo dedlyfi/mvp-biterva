@@ -140,27 +140,10 @@ export const Sidebar = ({ isOpen, onClose, navigation }: SidebarProps) => {
             description="Préstamos instantáneos sin vender tus BTC"
           />
 
-          {/* Growth Hacking: Dynamic Status Bar */}
-          <View className="mt-6 bg-white/5 p-6 rounded-[35px] border border-white/10">
-            <View className="flex-row justify-between items-center mb-3">
-                <View className="flex-row items-center">
-                    <ShieldCheck color="#EAB308" size={16} />
-                    <Text className="text-white font-bold ml-2">Security Level</Text>
-                </View>
-                <Text className="text-yellow-500 font-bold">Ultra</Text>
-            </View>
-            <View className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                <View className="h-full bg-yellow-500 w-[85%]" />
-            </View>
-            <View className="mt-4 flex-row justify-center">
-                <Cpu color="#444" size={12} />
-                <Text className="text-gray-600 text-[9px] ml-1 font-bold">Biterva Core v1.4.1 connected</Text>
-            </View>
-          </View>
         </View>
-
         <View className="pb-10 pt-4 items-center">
-            <Text className="text-gray-700 text-[10px] font-bold uppercase tracking-widest">Powered by Bitcoin ⚡</Text>
+            <Text className="text-gray-700 text-[10px] font-bold uppercase tracking-widest">Version v1.0</Text>
+            <Text className="text-gray-800 text-[8px] font-bold uppercase tracking-widest mt-1">Powered by Bitcoin ⚡</Text>
         </View>
       </Animated.View>
     </View>

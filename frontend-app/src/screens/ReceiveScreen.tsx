@@ -4,6 +4,7 @@ import QRCode from 'react-native-qrcode-svg';
 import { useWalletStore } from '../store/useWalletStore';
 import { X, Copy, Share2, User, CheckCircle2 } from 'lucide-react-native';
 import { BitervaPageLoader } from '../components/BitervaPageLoader';
+import { BitervaModal } from '../components/BitervaModal';
 
 // Definimos un helper seguro para Clipboard para evitar errores de contexto
 const setClipboardContent = (text: string) => {
@@ -21,6 +22,19 @@ export const ReceiveScreen = ({ navigation }: any) => {
     const { user: currentUser, generateInvoice, isLoading, boot, btcPrice, fetchPrice, balance, syncBalance } = useWalletStore();
     const initialBalance = useRef(balance);
 
+    // Modal state
+    const [modalConfig, setModalConfig] = useState<{
+        visible: boolean;
+        type: 'success' | 'error' | 'info' | 'insufficient_balance';
+        title: string;
+        message: string;
+    }>({
+        visible: false,
+        type: 'info',
+        title: '',
+        message: '',
+    });
+
     useEffect(() => {
         if (!currentUser) boot();
         fetchPrice();
@@ -35,18 +49,38 @@ export const ReceiveScreen = ({ navigation }: any) => {
     const [isEditing, setIsEditing] = useState(true);
     const [isCopied, setIsCopied] = useState(false);
     const [isPaid, setIsPaid] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(600); // 10 minutes default
 
     const lightningAddress = currentUser?.id ? `${currentUser.id.substring(0, 8)}@biterva.com` : 'user@biterva.com';
 
-    // Payment detection polling
+    // Payment detection polling and Timer logic
     useEffect(() => {
         let interval: NodeJS.Timeout;
+        let timer: NodeJS.Timeout;
+
         if (invoice && !isPaid) {
+            // Polling for balance changes
             interval = setInterval(async () => {
                 await syncBalance();
             }, 3000);
+
+            // Countdown timer
+            timer = setInterval(() => {
+                setTimeLeft(prev => {
+                    if (prev <= 1) {
+                        clearInterval(interval);
+                        clearInterval(timer);
+                        return 0;
+                    }
+                    return prev - 1;
+                });
+            }, 1000);
         }
-        return () => clearInterval(interval);
+
+        return () => {
+            clearInterval(interval);
+            clearInterval(timer);
+        };
     }, [invoice, isPaid]);
 
     // Check if paid
@@ -90,7 +124,12 @@ export const ReceiveScreen = ({ navigation }: any) => {
     const handleCreate = async () => {
         const amt = Number(amountSats) || 0;
         if (amt <= 0) {
-            Alert.alert('Error', 'Ingresa una cantidad válida');
+            setModalConfig({
+                visible: true,
+                type: 'error',
+                title: 'Monto Inválido',
+                message: 'Por favor ingresa un monto mayor a 0 para generar el cobro.',
+            });
             return;
         }
 
@@ -98,6 +137,7 @@ export const ReceiveScreen = ({ navigation }: any) => {
             initialBalance.current = balance; // Reset base balance for detection
             const data = await generateInvoice(amt, concepto || "Pago Biterva");
             setInvoice(data.payment_request);
+            setTimeLeft(600); // Start 10 min countdown
             setIsEditing(false);
         } catch (e: any) {
             console.error('GEN_INV_ERROR:', e);
@@ -106,7 +146,7 @@ export const ReceiveScreen = ({ navigation }: any) => {
     };
 
     const copyToClipboard = () => {
-        if (invoice) {
+        if (invoice && timeLeft > 0) {
             const success = setClipboardContent(invoice);
             if (success) {
                 setIsCopied(true);
@@ -141,6 +181,14 @@ export const ReceiveScreen = ({ navigation }: any) => {
             <StatusBar barStyle="light-content" />
             
             <BitervaPageLoader visible={isLoading} message="Brillando tu código..." />
+            
+            <BitervaModal 
+                visible={modalConfig.visible}
+                type={modalConfig.type}
+                title={modalConfig.title}
+                message={modalConfig.message}
+                onClose={() => setModalConfig({ ...modalConfig, visible: false })}
+            />
 
             {/* Header */}
             <View style={styles.header}>
@@ -223,7 +271,21 @@ export const ReceiveScreen = ({ navigation }: any) => {
                             <User color="#EAB308" size={20} />
                         </View>
 
-                        <Text style={styles.pollingText}>Esperando pago...</Text>
+                        {timeLeft > 0 ? (
+                            <View style={styles.timerContainer}>
+                                <Text style={styles.pollingText}>Esperando pago...</Text>
+                                <Text style={styles.timeLeftText}>
+                                    Vence en {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
+                                </Text>
+                            </View>
+                        ) : (
+                            <View style={styles.expiredContainer}>
+                                <Text style={styles.expiredText}>CÓDIGO EXPIRADO</Text>
+                                <TouchableOpacity onPress={handleCreate} style={styles.retryButton}>
+                                    <Text style={styles.retryButtonText}>Generar nuevo</Text>
+                                </TouchableOpacity>
+                            </View>
+                        )}
 
                         {/* Action Buttons */}
                         <View style={styles.actionButtonsRow}>
@@ -488,4 +550,37 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: 'bold',
     },
+    timerContainer: {
+        alignItems: 'center',
+        marginTop: 15,
+    },
+    timeLeftText: {
+        color: '#EAB308',
+        fontSize: 11,
+        fontWeight: 'bold',
+        marginTop: 5,
+        opacity: 0.8,
+    },
+    expiredContainer: {
+        alignItems: 'center',
+        marginTop: 20,
+    },
+    expiredText: {
+        color: '#F87171',
+        fontWeight: '900',
+        fontSize: 16,
+        letterSpacing: 2,
+    },
+    retryButton: {
+        marginTop: 10,
+        backgroundColor: 'rgba(255,255,255,0.1)',
+        paddingHorizontal: 20,
+        paddingVertical: 8,
+        borderRadius: 12,
+    },
+    retryButtonText: {
+        color: 'white',
+        fontSize: 12,
+        fontWeight: 'bold',
+    }
 });

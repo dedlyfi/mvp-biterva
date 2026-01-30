@@ -14,10 +14,14 @@ import { WithdrawScreen } from './src/screens/WithdrawScreen';
 import { HistoryScreen } from './src/screens/HistoryScreen';
 import { AnalyticsService } from './src/services/AnalyticsService';
 import { navigationRef } from './src/services/NavigationService';
+import { useUIStore } from './src/store/useUIStore';
+import { BitervaModal } from './src/components/BitervaModal';
 
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
+  const { modal, hideModal } = useUIStore();
+
   useEffect(() => {
     AnalyticsService.logEvent('app_open', { platform: 'os' });
   }, []);
@@ -40,6 +44,16 @@ function App(): React.JSX.Element {
           <Stack.Screen name="Withdraw" component={WithdrawScreen} />
           <Stack.Screen name="History" component={HistoryScreen} />
         </Stack.Navigator>
+
+        <BitervaModal 
+          visible={modal.visible}
+          type={modal.type}
+          title={modal.title}
+          message={modal.message}
+          onClose={hideModal}
+          onAction={modal.onAction}
+          actionLabel={modal.actionLabel}
+        />
       </SafeAreaProvider>
     </NavigationContainer>
   );

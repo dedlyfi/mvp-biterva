@@ -4,11 +4,25 @@ import * as NavigationService from '../services/NavigationService';
 import { useWalletStore } from '../store/useWalletStore';
 import { ArrowLeft, Smartphone, Bitcoin } from 'lucide-react-native';
 import { BitervaPageLoader } from '../components/BitervaPageLoader';
+import { BitervaModal } from '../components/BitervaModal';
 
 export const WithdrawScreen = ({ navigation }: any) => {
     const { withdrawToNequi, isLoading, balance, btcPrice, fetchPrice } = useWalletStore();
     const [amount, setAmount] = useState('');
     const [phone, setPhone] = useState('');
+
+    // Modal state
+    const [modalConfig, setModalConfig] = useState<{
+        visible: boolean;
+        type: 'success' | 'error' | 'info' | 'insufficient_balance';
+        title: string;
+        message: string;
+    }>({
+        visible: false,
+        type: 'info',
+        title: '',
+        message: '',
+    });
 
     useEffect(() => {
         fetchPrice();
@@ -17,22 +31,41 @@ export const WithdrawScreen = ({ navigation }: any) => {
 
     const handleWithdraw = async () => {
         if (!amount || !phone) {
-            Alert.alert("Atención", "Ingresa el monto y el número de Nequi");
+            setModalConfig({
+                visible: true,
+                type: 'error',
+                title: 'Datos Incompletos',
+                message: 'Por favor ingresa el monto y el número de Nequi para continuar.',
+            });
             return;
         }
 
         const amt = parseInt(amount);
         if (amt > balance) {
-            Alert.alert("Saldo insuficiente", `Solo tienes ${balance} sats.`);
+            setModalConfig({
+                visible: true,
+                type: 'insufficient_balance',
+                title: 'Saldo Insuficiente',
+                message: `Intentas retirar ${amt.toLocaleString()} sats, pero solo tienes ${balance.toLocaleString()} sats disponibles.`,
+            });
             return;
         }
 
         try {
             await withdrawToNequi(amt, phone);
-            Alert.alert("Éxito", "Tu retiro a Nequi ha sido procesado");
-            navigation.goBack();
+            setModalConfig({
+                visible: true,
+                type: 'success',
+                title: 'Retiro en Proceso',
+                message: 'Tu retiro a Nequi ha sido enviado a procesamiento. ✨ Pronto verás los fondos en tu cuenta.',
+            });
         } catch (e: any) {
-            Alert.alert("Error", e.message || "No se pudo procesar el retiro");
+            setModalConfig({
+                visible: true,
+                type: 'error',
+                title: 'Error de Retiro',
+                message: e.message || 'No se pudo procesar el retiro. Verifica tu conexión.',
+            });
         }
     };
 
@@ -42,6 +75,18 @@ export const WithdrawScreen = ({ navigation }: any) => {
         <View className="flex-1 bg-black">
             <StatusBar barStyle="light-content" />
             <BitervaPageLoader visible={isLoading} message="Enviando a Nequi..." />
+
+            <BitervaModal 
+                visible={modalConfig.visible}
+                type={modalConfig.type}
+                title={modalConfig.title}
+                message={modalConfig.message}
+                onClose={() => {
+                    const wasSuccess = modalConfig.type === 'success';
+                    setModalConfig({ ...modalConfig, visible: false });
+                    if (wasSuccess) navigation.goBack();
+                }}
+            />
 
             {/* HEADER */}
             <View className="flex-row items-center px-6 pt-14 pb-4">

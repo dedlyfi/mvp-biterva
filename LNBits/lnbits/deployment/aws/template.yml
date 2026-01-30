@@ -1,0 +1,81 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Biterva LNBits + LND (Neutrino) + Tor Infrastructure'
+
+Parameters:
+  KeyPairName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
+    Type: AWS::EC2::KeyPair::KeyName
+    ConstraintDescription: Must be the name of an existing EC2 KeyPair.
+
+Resources:
+  LNBitsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH, LNBits (7777), Lightning(9735), and LND REST (8080)
+      Tags:
+        - Key: Name
+          Value: Biterva-LNBits-SG
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 7777
+          ToPort: 7777
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 9735
+          ToPort: 9735
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+          CidrIp: 0.0.0.0/0
+
+  LNBitsInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t3.small
+      ImageId: ami-09040d770ffe2224f # Ubuntu 22.04 LTS (us-east-2) - Adjust if in another region
+      KeyName: !Ref KeyPairName
+      SecurityGroups:
+        - !Ref LNBitsSecurityGroup
+      Tags:
+        - Key: Name
+          Value: Biterva-LNBits-Production
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 30
+            VolumeType: gp3
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          # Install Docker
+          apt-get update
+          apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+          add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+          apt-get update
+          apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+          
+          # Prepare folder
+          mkdir -p /home/ubuntu/lnbits
+          chown -R ubuntu:ubuntu /home/ubuntu/lnbits
+
+  LNBitsEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: !Ref LNBitsInstance
+
+Outputs:
+  InstanceId:
+    Description: The ID of the LNBits instance
+    Value: !Ref LNBitsInstance
+  PublicIP:
+    Description: The static IP address for Biterva LNBits
+    Value: !Ref LNBitsEIP
+  URL:
+    Description: LNBits URL
+    Value: !Sub http://${LNBitsEIP}:7777

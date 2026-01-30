@@ -1,0 +1,12 @@
+{
+  "wallet_password": "RDN2M2wwcDNyMjAyNg==",
+  "cipher_seed_mnemonic": [
+    "about", "address", "observe", "flower",
+    "pride", "post", "city", "clerk",
+    "combine", "clump", "ocean", "harbor",
+    "swing", "layer", "test", "snake",
+    "common", "pipe", "dutch", "police",
+    "negative", "bench", "true", "sister"
+  ],
+  "recovery_window": 2500
+}

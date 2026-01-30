@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { client } from '../api/client';
 import { AuthService } from '../services/AuthService';
 import { AnalyticsService } from '../services/AnalyticsService';
+import { useUIStore } from './useUIStore';
 
 interface Transaction {
   id: string;
@@ -29,6 +30,7 @@ interface WalletState {
   btcPrice: number;
   isLoading: boolean;
   isSyncing: boolean;
+  nodeOnline: boolean;
   error: string | null;
   
   // Actions
@@ -47,6 +49,7 @@ export const useWalletStore = create<WalletState>((set, get) => ({
   btcPrice: 0,
   isLoading: false,
   isSyncing: false,
+  nodeOnline: true,
   error: null,
 
   boot: async () => {
@@ -87,7 +90,17 @@ export const useWalletStore = create<WalletState>((set, get) => ({
         }
     } catch (err: any) {
         console.error('❌ [WalletStore] Boot failed:', err.message);
-        set({ error: 'Connection error. Retrying...' });
+        const urlRef = require('../api/client').API_URL;
+        const errorDetail = err.response?.data?.message || err.message || "Error desconocido";
+        const errorMsg = `No pudimos conectar con el servidor: ${urlRef}.\n\nError: ${errorDetail}\n\n✨ Verifica tu internet.`;
+        
+        set({ error: errorMsg });
+        
+        useUIStore.getState().showModal({
+            type: 'error',
+            title: 'Falla de Conexión',
+            message: errorMsg,
+        });
     } finally {
         set({ isSyncing: false });
     }
@@ -96,7 +109,10 @@ export const useWalletStore = create<WalletState>((set, get) => ({
   fetchPrice: async () => {
     try {
         const res = await client.get('/prices');
-        set({ btcPrice: res.data.cop });
+        set({ 
+            btcPrice: res.data.cop,
+            nodeOnline: res.data.nodeOnline ?? true
+        });
     } catch (e) {
         console.warn('⚠️ [WalletStore] Price fetch failed, using fallback');
         if (get().btcPrice === 0) set({ btcPrice: 400000000 });
@@ -162,7 +178,15 @@ export const useWalletStore = create<WalletState>((set, get) => ({
         user = get().user;
     }
 
-    if (!user) throw new Error("Connection unstable. Please refresh the app.");
+    if (!user) {
+        const errorMsg = "Conexión inestable con el nodo. ✨ Por favor, refresca la app o intenta de nuevo en unos segundos.";
+        useUIStore.getState().showModal({
+            type: 'error',
+            title: '¡Rayos! Conexión Inestable',
+            message: errorMsg,
+        });
+        throw new Error(errorMsg);
+    }
     
     set({ isLoading: true });
     try {

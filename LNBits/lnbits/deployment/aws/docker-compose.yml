@@ -1,5 +1,12 @@
 services:
-  # --- 1. NUEVO SERVICIO: LND (Modo Neutrino) ---
+  # --- TOR SERVICE (Bypass network blocks) ---
+  tor:
+    image: alpine
+    container_name: lnbits-tor
+    command: sh -c "apk add --no-cache tor && tor --SocksPort 0.0.0.0:9050 --DataDirectory /tmp/tor --CookieAuthentication 0"
+    restart: always
+
+  # --- 1. LND (Modo Neutrino) ---
   lnd:
     image: lightninglabs/lnd:v0.17.3-beta
     container_name: lnbits-lnd
@@ -35,18 +42,12 @@ services:
       --tor.active
       --tor.socks=tor:9050
       --tor.control=tor:9051
+    depends_on:
+      - tor
 
-  # --- TOR SERVICE (Bypass network blocks) ---
-  tor:
-    image: alpine
-    container_name: lnbits-tor
-    command: sh -c "apk add --no-cache tor && tor --SocksPort 0.0.0.0:9050 --DataDirectory /tmp/tor --CookieAuthentication 0"
-    restart: always
-
-  # --- 3. SERVICIO EXISTENTE: LNBITS (Modificado) ---
+  # --- 3. LNBITS ---
   lnbits:
-    build: .
-    image: lnbits-custom:1.4.1
+    image: lnbits/lnbits:v1.4.1-rc2
     container_name: lnbits-main
     restart: always
     ports:
@@ -61,6 +62,5 @@ services:
       - 1.1.1.1
     volumes:
       - ./data:/app/data
-      # ¡IMPORTANTE!: Montamos la carpeta de data de LND dentro de LNBits
-      # Esto permite que LNBits lea el archivo 'admin.macaroon' y 'tls.cert'
       - ./lnd-data:/lnd-data-ro:ro
+      - ./extensions:/app/lnbits/extensions
